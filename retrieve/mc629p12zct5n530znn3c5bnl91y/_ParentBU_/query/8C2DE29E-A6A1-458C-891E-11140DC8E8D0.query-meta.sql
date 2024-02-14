@@ -1,0 +1,10 @@
+SELECT
+    nome,
+    cognome,
+    email,
+    newsletter_notizie,
+    newsletter_offerte,
+    newsletter_eventi,
+    newsletter_comunicazioni
+FROM
+    UTI_DEM_Audience

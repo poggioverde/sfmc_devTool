@@ -1,0 +1,334 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cloud.tirreno.coop.it/table2CsvRes"></script>
+            <script>
+                $(document).ready(function () {
+                    var searchTerm = '';
+                    //nascondo i contenitori
+                    //$('#emailContainer').hide();
+                    //$('#smsContainer').hide();
+                    $('#my-table').hide();
+
+                    //aggancio il button click per mostrare i contenitori
+
+                    $('#mailImage').on('click', function (e) {
+                        $('#emailContainer').toggle('slow');
+                        $('#smsContainer').hide();
+                    });
+                    $('#smsImage').on('click', function (e) {
+                        $('#smsContainer').toggle('slow');
+                        $('#emailContainer').hide();
+                    });
+
+                    $('#chkEmail').on('change', function () {
+                        searchTerm = '';
+                        if (this.checked == true) {
+                            searchTerm = this.value;
+                            $('#chkJourney').prop('checked', false);
+                            //$("#audienceSelect").val("-1").change();
+                            $('#audienceSelect').val('-1');
+                        } else {
+                            searchTerm = '';
+                        }
+
+                        //cerco il termine tra i div per mostrarli o meno
+                        filtraLista(searchTerm);
+                    });
+
+                    $('#chkJourney').on('change', function () {
+                        searchTerm = '';
+                        if (this.checked == true) {
+                            searchTerm = this.value;
+                            $('#chkEmail').prop('checked', false);
+                            //$("#audienceSelect").val("-1").change();
+                            $('#audienceSelect').val('-1');
+                        } else {
+                            searchTerm = '';
+                        }
+
+                        //cerco il termine tra i div per mostrarli o meno
+                        filtraLista(searchTerm);
+                    });
+
+                    //recupero il valore dalla dropdownlist
+                    $('#audienceSelect').change(function () {
+                        searchTerm = '';
+                        $('#chkJourney').prop('checked', false);
+                        $('#chkEmail').prop('checked', false);
+                        if ($(this).val() != -1) {
+                            searchTerm = $(this).val();
+                        } else {
+                            searchTerm = '';
+                        }
+
+                        filtraLista(searchTerm);
+                    });
+
+                    //gestione dell'export
+                    $('#exportImage').on('click', function (e) {
+                        e.preventDefault();
+                        var now = new Date();
+                        var anno = now.getFullYear();
+                        var mese = now.getMonth() + 1;
+                        var giorno = now.getDate();
+                        var nomeFile = giorno + '-' + mese + '-' + anno + '_kpi.csv';
+                        //mostro la tabella per fare l'export
+                        $('#my-table').show();
+                        $('#my-table').TableCSVExport({
+                            delivery: 'download',
+                            filename: nomeFile
+                        });
+                        //al termine dell'export nascondo nuovamente la table
+                        $('#my-table').hide();
+                    });
+                });
+                //fine document ready
+
+                function filtraLista(searchTerm) {
+                    $('.searchable')
+                        .hide()
+                        .filter(":contains('" + searchTerm + "')")
+                        //.css({"margin": "ellipsis", "overflow": "hidden", "white-space": "nowrap"})
+                        .show();
+                    //.css({"margin": "0"});
+                }
+            </script>
+            <style>
+                .box {
+                    width: 300px;
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    user-select: none;
+                }
+                .box label {
+                    font-size: 22px;
+                    color: #4d4d4d;
+                    position: absolute;
+                    z-index: 10;
+                    padding-left: 30px;
+                    cursor: pointer;
+                }
+                .box input {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                }
+                .box input:checked ~ .check {
+                    border-color: #860337;
+                    box-shadow: 0px 0px 0px 15px #860337 inset;
+                }
+                .box input:checked ~ .check::after {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .box .check {
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    border-radius: 100px;
+                    background-color: #fff;
+                    border: 2px solid #860337;
+                    box-shadow: 0px 0px 0px 0px #860337 inset;
+                    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+                }
+                .box .check::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    z-index: 4;
+                    position: absolute;
+                    transform: scale(0);
+                    background-size: 50%;
+
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition-delay: 0.2s !important;
+                    transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+                }
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                }
+
+                th,
+                td {
+                    text-align: left;
+                    padding: 5px;
+                }
+
+                .boxSelect select {
+                    background-color: #860337;
+                    color: white;
+                    padding: 12px;
+                    width: 40%;
+                    border: none;
+                    font-size: 20px;
+                    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+                    -webkit-appearance: button;
+                    appearance: button;
+                    outline: none;
+                }
+
+                .boxSelect::before {
+                    content: '\f13a';
+                    font-family: FontAwesome;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 20%;
+                    height: 100%;
+                    text-align: center;
+                    font-size: 28px;
+                    line-height: 45px;
+                    color: rgba(255, 255, 255, 0.5);
+                    /*background-color: rgba(255, 255, 255, 0.1);*/
+                    pointer-events: none;
+                }
+
+                .boxSelect:hover::before {
+                    color: rgba(255, 255, 255, 0.6);
+                    /*background-color: rgba(255, 255, 255, 0.2);*/
+                }
+
+                .boxSelect select option {
+                    padding: 30px;
+                }
+                .container {
+                    /*display: block;*/
+
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+
+                .container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #eee;
+                }
+
+                .container:hover input ~ .checkmark {
+                    background-color: #ccc;
+                }
+
+                .container input:checked ~ .checkmark {
+                    background-color: #860337;
+                }
+
+                .checkmark:after {
+                    content: '';
+                    position: absolute;
+                    display: none;
+                }
+
+                .container input:checked ~ .checkmark:after {
+                    display: block;
+                }
+
+                .container .checkmark:after {
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+                @media screen and (max-width: 1200px) {
+                    .searchable {
+                        width: 98vw;
+                    }
+                }
+
+                #emailContainer {
+                    font-family: 'Roboto', sans-serif;
+                    max-width: 800px;
+                    margin: auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    color: #666;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .searchable {
+                    margin-bottom: 20px;
+                    border: 1px solid #860337;
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+
+                .searchable h3 {
+                    background-color: #860337;
+                    color: white;
+                    margin: 0;
+                    padding: 10px;
+                    font-size: 18px;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+
+                th {
+                    background-color: #860337;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                td {
+                    padding: 10px;
+                    text-align: left;
+                    border-bottom: 1px solid #eee;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+
+                tr:hover {
+                    background-color: #f1f1f1;
+                }
+            </style>
+        </td>
+    </tr>
+</table>

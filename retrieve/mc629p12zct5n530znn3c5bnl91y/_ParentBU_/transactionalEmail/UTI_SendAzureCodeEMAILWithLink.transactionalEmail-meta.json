@@ -1,0 +1,20 @@
+{
+    "name": "ar-email-link",
+    "definitionKey": "UTI_SendAzureCodeEMAILWithLink",
+    "description": "Created via REST",
+    "classification": "Default Transactional",
+    "status": "Active",
+    "createdDate": "2024-02-07T12:08:00",
+    "modifiedDate": "2024-02-07T12:08:00",
+    "subscriptions": {
+        "autoAddSubscriber": true,
+        "updateSubscriber": false,
+        "r__dataExtension_CustomerKey": "D9BB2DF0-F4EF-450D-A04C-40575B8BE3E9",
+        "r__list_PathName": "my subscribers/All Subscribers"
+    },
+    "options": {
+        "trackLinks": true
+    },
+    "journey": {},
+    "r__asset_customerKey": "24bceeda-2aa5-48eb-a93b-1d23be3ce4be"
+}

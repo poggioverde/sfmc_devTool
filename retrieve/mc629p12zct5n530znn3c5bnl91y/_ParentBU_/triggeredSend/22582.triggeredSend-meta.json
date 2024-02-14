@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-09-22T07:47:00",
+    "ModifiedDate": "2024-02-06T02:29:00",
+    "CustomerKey": 22582,
+    "Name": "Videtta_test_template - 7cf74d43c1bd462ea7afd9c553349d8e",
+    "Description": "Videtta_test_template - 7cf74d43c1bd462ea7afd9c553349d8e",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 769
+    },
+    "FromName": "Unicoop Tirreno",
+    "FromAddress": "noreplynews@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 132
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Birra o Pasta",
+    "DynamicEmailSubject": "Birra o Pasta",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/Decision_Split_PdV/Version 1",
+    "r__assetMessage_Name_readOnly": "Videtta_test_template",
+    "r__assetMessage_Key": "c6ceb428-d568-48eb-9789-1ef77ec311c3",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

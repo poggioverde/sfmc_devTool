@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-10-24T03:53:00",
+    "ModifiedDate": "2023-10-24T03:57:00",
+    "CustomerKey": 27254,
+    "Name": "Newsletter Demo - 93867ee2118143b78aa7b7dcb5beecd7",
+    "Description": "Newsletter Demo - 93867ee2118143b78aa7b7dcb5beecd7",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 802
+    },
+    "FromName": "Comunicazioni Unicoop Tirreno",
+    "FromAddress": "comunicazioni@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 133
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Demo Newsletter Commerciale",
+    "DynamicEmailSubject": "Demo Newsletter Commerciale",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/Sender Profiles Attempts/Version 1",
+    "r__assetMessage_Name_readOnly": "Newsletter Demo",
+    "r__assetMessage_Key": "5b0efa56-869f-430b-9aeb-68a79a0a346b",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

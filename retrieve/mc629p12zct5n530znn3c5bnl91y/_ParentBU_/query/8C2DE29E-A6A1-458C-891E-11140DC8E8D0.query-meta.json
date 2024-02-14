@@ -1,0 +1,11 @@
+{
+    "name": "Audience_qa",
+    "key": "8C2DE29E-A6A1-458C-891E-11140DC8E8D0",
+    "description": "",
+    "targetKey": "FEB64C3B-2815-4607-8BD0-CF7039676994",
+    "createdDate": "2023-12-14T03:32:55.18",
+    "modifiedDate": "2023-12-14T03:34:03.703",
+    "targetUpdateTypeName": "Overwrite",
+    "isFrozen": false,
+    "r__folder_Path": "Query"
+}

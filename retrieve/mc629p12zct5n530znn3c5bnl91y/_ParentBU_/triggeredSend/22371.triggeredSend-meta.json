@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-09-21T02:52:00",
+    "ModifiedDate": "2024-02-06T02:30:00",
+    "CustomerKey": 22371,
+    "Name": "My Sample - 074e56c4b9af4ceaa35d604632b17f7d",
+    "Description": "My Sample - 074e56c4b9af4ceaa35d604632b17f7d",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 769
+    },
+    "FromName": "Unicoop Tirreno",
+    "FromAddress": "noreplynews@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 132
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Welcome %%Name%%",
+    "DynamicEmailSubject": "Welcome %%Name%%",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/New Journey - July 24 2023 at 5.45 PM/Version 1",
+    "r__assetMessage_Name_readOnly": "My Sample",
+    "r__assetMessage_Key": "ad7f5a4f-a255-4998-a9b4-ee38c55e01a7",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

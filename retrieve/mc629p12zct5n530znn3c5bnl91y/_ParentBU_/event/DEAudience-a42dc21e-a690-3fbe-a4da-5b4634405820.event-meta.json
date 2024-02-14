@@ -1,0 +1,36 @@
+{
+    "type": "EmailAudience",
+    "name": "Prova YDR",
+    "description": "",
+    "createdDate": "2023-10-06T07:23:36.223",
+    "createdBy": 737195538,
+    "modifiedDate": "2023-10-06T07:34:08.15",
+    "modifiedBy": 737195538,
+    "mode": "Production",
+    "eventDefinitionKey": "DEAudience-a42dc21e-a690-3fbe-a4da-5b4634405820",
+    "dataExtensionName": "Prova_ydr",
+    "sourceApplicationExtensionId": "97e942ee-6914-4d3d-9e52-37ecb71f79ed",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/images/icon-data-extension.svg",
+    "arguments": {
+        "serializedObjectType": 3,
+        "eventDefinitionKey": "DEAudience-a42dc21e-a690-3fbe-a4da-5b4634405820",
+        "dataExtensionId": "3F379374-5A0D-4FC1-B2E3-F27C7E1B83A9",
+        "useHighWatermark": false,
+        "automationId": "51aeca24-9207-49db-a8a2-c4270b31b0ad",
+        "criteria": ""
+    },
+    "metaData": {
+        "scheduleState": "No Schedule",
+        "criteriaDescription": "",
+        "scheduleFlowMode": "runOnce",
+        "runOnceScheduleMode": "onPublish"
+    },
+    "interactionCount": 0,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Audience",
+    "publishedInteractionCount": 0,
+    "automationId": "51aeca24-9207-49db-a8a2-c4270b31b0ad",
+    "disableDEDataLogging": false
+}

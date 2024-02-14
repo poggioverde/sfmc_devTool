@@ -1,0 +1,595 @@
+{
+    "definitionKey": "Salesforce00D7S000000j13RUAQContact",
+    "relationships": [
+        {
+            "canModify": false,
+            "canRemove": false,
+            "isHidden": false,
+            "isSystemDefined": false,
+            "isGroupToSetRelationship": true,
+            "leftItem": {
+                "cardinality": "One",
+                "relationshipType": "AttributeGroup",
+                "r__attributeGroup_definitionKey": "Salesforce00D7S000000j13RUAQmc_connect_crm_unicooptirreno_it_prod"
+            },
+            "leftRelationshipIDs": [
+                {
+                    "type": "guid",
+                    "value": "01394463-3c59-ed11-ba3e-f40343e7e538"
+                }
+            ],
+            "leftRelationshipReferenceType": "AlternateKey",
+            "relationshipAttributes": [
+                {
+                    "leftAttributeID": "d45c76e5-f126-ee11-ba48-f40343e871c8",
+                    "leftConnectingID": {
+                        "identifierType": "FullyQualifiedName"
+                    },
+                    "c__rightFullyQualifiedName": "Contact_Salesforce.Id"
+                }
+            ],
+            "relationshipID": "5d71e6ef-f626-ee11-ba48-f40343e871c8",
+            "rightItem": {
+                "cardinality": "Many",
+                "relationshipType": "AttributeSet",
+                "r__attributeSet_definitionKey": "Salesforce00D7S000000j13RUAQContact"
+            }
+        },
+        {
+            "canModify": false,
+            "canRemove": false,
+            "isHidden": false,
+            "isSystemDefined": false,
+            "isGroupToSetRelationship": false,
+            "leftItem": {
+                "cardinality": "One",
+                "relationshipType": "AttributeSet",
+                "r__attributeSet_definitionKey": "Salesforce00D7S000000j13RUAQContact"
+            },
+            "relationshipAttributes": [
+                {
+                    "c__leftFullyQualifiedName": "Contact_Salesforce.Punto_Vendita_di_Riferimento__c",
+                    "c__rightFullyQualifiedName": "Punto_Vendita__c_Salesforce.Id"
+                }
+            ],
+            "relationshipID": "2dfc668b-2a6c-ee11-ba75-f40343e86d98",
+            "rightItem": {
+                "cardinality": "One",
+                "relationshipType": "AttributeSet",
+                "r__attributeSet_definitionKey": "Salesforce00D7S000000j13RUAQPunto_Vendita__c"
+            }
+        },
+        {
+            "canModify": false,
+            "canRemove": false,
+            "isHidden": false,
+            "isSystemDefined": false,
+            "isGroupToSetRelationship": false,
+            "leftItem": {
+                "cardinality": "One",
+                "relationshipType": "AttributeSet",
+                "r__attributeSet_definitionKey": "Salesforce00D7S000000j13RUAQContact"
+            },
+            "relationshipAttributes": [
+                {
+                    "c__leftFullyQualifiedName": "Contact_Salesforce.AccountId",
+                    "c__rightFullyQualifiedName": "Account_Salesforce.Id"
+                }
+            ],
+            "relationshipID": "4bafd4bf-302a-ee11-ba48-f40343e871c8",
+            "rightItem": {
+                "cardinality": "One",
+                "relationshipType": "AttributeSet",
+                "r__attributeSet_definitionKey": "Salesforce00D7S000000j13RUAQAccount"
+            }
+        }
+    ],
+    "valueDefinitions": [
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Account ID",
+            "definitionKey": "AccountId",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "AccountId",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "AccountId"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Contact ID",
+            "definitionKey": "Id",
+            "isHidden": false,
+            "isIdentityValue": true,
+            "isNullable": false,
+            "isPrimaryKey": true,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Id",
+                "externalObjectFieldDataTypeName": "id",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": true
+            },
+            "name": "Id"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Created By ID",
+            "definitionKey": "CreatedById",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "CreatedById",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "CreatedById"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "EmailAddress",
+            "description": "Email",
+            "definitionKey": "Email",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 80,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Email",
+                "externalObjectFieldDataTypeName": "email",
+                "externalObjectFieldLength": 80,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Email"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Email Opt Out",
+            "definitionKey": "HasOptedOutOfEmail",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 0,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "HasOptedOutOfEmail",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "HasOptedOutOfEmail"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Individual ID",
+            "definitionKey": "IndividualId",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "IndividualId",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "IndividualId"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Last Modified By ID",
+            "definitionKey": "LastModifiedById",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "LastModifiedById",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "LastModifiedById"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Master Record ID",
+            "definitionKey": "MasterRecordId",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "MasterRecordId",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "MasterRecordId"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Owner ID",
+            "definitionKey": "OwnerId",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "OwnerId",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "OwnerId"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Reports To ID",
+            "definitionKey": "ReportsToId",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "scale": 0,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "ReportsToId",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "ReportsToId"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Comune",
+            "definitionKey": "Comune_di_Domicilio__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Comune_di_Domicilio__c",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Comune_di_Domicilio__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Comune",
+            "definitionKey": "Comune_di_Residenza__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Comune_di_Residenza__c",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Comune_di_Residenza__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Luogo di Nascita",
+            "definitionKey": "Luogo_di_Nascita__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Luogo_di_Nascita__c",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Luogo_di_Nascita__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Luogo di Rilascio",
+            "definitionKey": "Luogo_di_Rilascio__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Luogo_di_Rilascio__c",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Luogo_di_Rilascio__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Phone",
+            "description": "Mobile Phone",
+            "definitionKey": "MobilePhone",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 50,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "MobilePhone",
+                "externalObjectFieldDataTypeName": "phone",
+                "externalObjectFieldLength": 40,
+                "externalIsRowIdentifier": false
+            },
+            "name": "MobilePhone"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Text",
+            "description": "Negozio",
+            "definitionKey": "Punto_Vendita_di_Riferimento__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": true,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "length": 18,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Punto_Vendita_di_Riferimento__c",
+                "externalObjectFieldDataTypeName": "reference",
+                "externalObjectFieldLength": 18,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Punto_Vendita_di_Riferimento__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Newsletter Comunicazioni",
+            "definitionKey": "Newsletter_Comunicazioni__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Newsletter_Comunicazioni__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Newsletter_Comunicazioni__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Newsletter Eventi",
+            "definitionKey": "Newsletter_Eventi__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Newsletter_Eventi__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Newsletter_Eventi__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Newsletter Notizie",
+            "definitionKey": "Newsletter_Notizie__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Newsletter_Notizie__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Newsletter_Notizie__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Newsletter Offerte",
+            "definitionKey": "Newsletter_Offerte__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Newsletter_Offerte__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Newsletter_Offerte__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Marketing",
+            "definitionKey": "Consenso_Privacy_Marketing__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Consenso_Privacy_Marketing__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Consenso_Privacy_Marketing__c"
+        },
+        {
+            "dataSourceID": 81,
+            "dataType": "Boolean",
+            "description": "Profilazione",
+            "definitionKey": "Consenso_Privacy_Profilazione__c",
+            "isHidden": false,
+            "isIdentityValue": false,
+            "isNullable": false,
+            "isPrimaryKey": false,
+            "isReadOnly": true,
+            "isSystemDefined": true,
+            "isUpdateable": false,
+            "storageObjectFieldInformation": {
+                "externalObjectFieldAPIName": "Consenso_Privacy_Profilazione__c",
+                "externalObjectFieldDataTypeName": "boolean",
+                "externalObjectFieldLength": 0,
+                "externalIsRowIdentifier": false
+            },
+            "name": "Consenso_Privacy_Profilazione__c"
+        }
+    ],
+    "applicationID": "4f35adb8-c045-4cce-8f7d-c45858cd3f5e",
+    "applicationKey": "com.exacttarget.Salesforce Synchronized Data Source",
+    "attributeCount": 0,
+    "canAddValues": false,
+    "canChangeValues": false,
+    "canModify": false,
+    "canRemove": false,
+    "categoryID": 24522,
+    "createdBy": -1000,
+    "createDate": "2023-07-20T06:14:00",
+    "dataRetentionProperties": {
+        "isRowBasedRetention": false,
+        "isResetRetentionPeriodOnImport": false,
+        "isDeleteAtEndOfRetentionPeriod": false
+    },
+    "localizedDescription": {
+        "resourceSetKey": "ContactsMeta.SystemAttributeSetsDescriptions",
+        "resourceValueKey": "ATTR_SET_DESC_Salesforce00D7S000000j13RUAQContact",
+        "value": "Contact"
+    },
+    "isCustomObjectBacked": false,
+    "isEvent": false,
+    "isHidden": false,
+    "isReadOnly": true,
+    "isRoot": false,
+    "isSendable": false,
+    "isShared": false,
+    "isSystemDefined": true,
+    "isTestaable": true,
+    "parentID": "00000000-0000-0000-0000-000000000000",
+    "relationshipCount": 3,
+    "sendAttributeStorageName": "_ContactKey",
+    "sendContactKeyStorageName": "_SubscriberKey",
+    "storageLogicalType": "ExactTargetSchema",
+    "storageObjectIDs": [
+        "5f71e6ef-f626-ee11-ba48-f40343e871c8"
+    ],
+    "setDefinitionKey": "Salesforce00D7S000000j13RUAQContact",
+    "name": "Contact_Salesforce",
+    "r__dataExtension_CustomerKey": "Contact_Salesforce"
+}

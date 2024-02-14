@@ -1,0 +1,31 @@
+{
+    "CreatedDate": "2023-10-06T07:34:00",
+    "ModifiedDate": "2023-10-06T07:34:00",
+    "CustomerKey": 25111,
+    "Name": "Videtta_test_template - a1cc3edb02794f02a308f1a84f1a6d92",
+    "Description": "Videtta_test_template - a1cc3edb02794f02a308f1a84f1a6d92",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "FromName": "INRES S.C. - UNICOOP TIRRENO SOCIETA' COOPERATIVA",
+    "FromAddress": "riccardo.deri@unicooptirreno.coop.it",
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "New",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Birra o Pasta",
+    "DynamicEmailSubject": "Birra o Pasta",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "HiddenCategory/HiddenJourneyBuilderTriggeredSends/0c2b5141-d31e-46c3-bb53-5d07cc596e9e_V1",
+    "r__assetMessage_Name_readOnly": "Videtta_test_template",
+    "r__assetMessage_Key": "c6ceb428-d568-48eb-9789-1ef77ec311c3",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

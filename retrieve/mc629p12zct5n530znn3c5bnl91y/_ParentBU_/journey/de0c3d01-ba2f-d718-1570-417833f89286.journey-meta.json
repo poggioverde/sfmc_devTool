@@ -1,0 +1,154 @@
+{
+    "key": "de0c3d01-ba2f-d718-1570-417833f89286",
+    "name": "New Journey - February 9 2024 at 9.28 AM",
+    "lastPublishedDate": "0001-01-01T00:00:00",
+    "description": "",
+    "version": 1,
+    "workflowApiVersion": 1,
+    "createdDate": "2024-02-09T02:37:28.997",
+    "modifiedDate": "2024-02-09T02:37:28.997",
+    "activities": [
+        {
+            "id": "a781f923-8d9a-45eb-8e54-7b7acf1397bb",
+            "key": "WAITBYDURATION-1",
+            "name": "",
+            "description": "",
+            "type": "WAIT",
+            "outcomes": [
+                {
+                    "key": "ffd68a5c-1957-4a2f-89da-d7b214b38191",
+                    "arguments": {},
+                    "metaData": {
+                        "invalid": false
+                    }
+                }
+            ],
+            "arguments": {},
+            "configurationArguments": {
+                "waitDuration": 1,
+                "waitUnit": "DAYS"
+            },
+            "metaData": {
+                "isConfigured": true,
+                "uiType": "WAITBYDURATION"
+            },
+            "schema": {
+                "arguments": {
+                    "endDate": {
+                        "dataType": "Date",
+                        "isNullable": false,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitEndDateAttributeDataBound": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitDefinitionId": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitForEventId": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "executionMode": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "startActivityKey": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitQueueId": {
+                        "dataType": "LongNumber",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    }
+                }
+            }
+        }
+    ],
+    "triggers": [
+        {
+            "key": "TRIGGER",
+            "name": "TRIGGER",
+            "description": "",
+            "type": "SalesforceObjectTriggerV2",
+            "outcomes": [],
+            "arguments": {},
+            "configurationArguments": {
+                "applicationExtensionKey": "SalesforceObjectTriggerV2",
+                "contactKey": "{\"relationshipIdName\":\"Id\",\"relationshipName\":\"Common\",\"isPolymorphic\":false,\"referenceObjectName\":\"Common\"}",
+                "contactPersonType": "CampaignMember",
+                "evaluationCriteriaSummary": "Created;",
+                "eventDataConfig": "{\"objects\":[{\"dePrefix\":\"CampaignMember:\",\"isPolymorphic\":false,\"relationshipName\":\"\",\"referenceObject\":\"\",\"relationshipIdName\":\"\",\"fields\":[\"Id\",\"CampaignId\",\"City\",\"Country\",\"MobilePhone\"]},{\"dePrefix\":\"CampaignMember:Common:\",\"isPolymorphic\":false,\"referenceObject\":\"Contacts and Leads\",\"relationshipName\":\"Common\",\"fields\":[\"Id\",\"Email\"]},{\"dePrefix\":\"CampaignMember:Campaign:\",\"isPolymorphic\":false,\"referenceObject\":\"Campaign\",\"relationshipName\":\"Campaign\",\"fields\":[\"Id\",\"IsActive\"]}]}",
+                "eventDataSummary": "CampaignMember:Id; CampaignMember:CampaignId; CampaignMember:City; CampaignMember:Country; CampaignMember:MobilePhone; CampaignMember:Common:Id; CampaignMember:Common:Email; CampaignMember:Campaign:Id; CampaignMember:Campaign:IsActive; ",
+                "objectAPIName": "CampaignMember",
+                "passThroughArgument": "{\"fields\":{\"ContactKey\":\"CampaignMember:Common:Id\",\"Email\":\"CampaignMember:Common:Email\"}}",
+                "primaryObjectFilterCriteria": "{\"operand\":\"OR\",\"conditions\":[{\"_length\":18,\"dataType\":\"reference\",\"fieldName\":\"CampaignId\",\"folderId\":\"CampaignMember-CampaignMember\",\"id\":\"CampaignMember-CampaignId\",\"isPolymorphic\":false,\"name\":\"Campaign ID\",\"operator\":\"EQUALS\",\"precision\":0,\"referenceObjectName\":\"CampaignMember\",\"relationshipIdName\":\"\",\"relationshipName\":\"CampaignMember\",\"scale\":0,\"text\":\"Campaign ID\",\"value\":\"701SW000003JK9TYAW\"}]}",
+                "primaryObjectFilterSummary": "CampaignMember:CampaignId = \"DD Demo Campaign\" (701SW000003JK9TYAW)",
+                "relatedObjectFilterCriteria": "{\"operand\":\"AND\",\"conditions\":[]}",
+                "relatedObjectFilterSummary": "",
+                "salesforceTriggerCriteria": "Created",
+                "version": "3.0",
+                "whoToInject": "Contact ID/Lead ID (Contacts and Leads)"
+            },
+            "metaData": {
+                "eventDefinitionKey": "SalesforceObje91a55a6941be7f56476271d353ff1a7",
+                "chainType": "None",
+                "configurationRequired": false,
+                "iconUrl": "/jbint-events/events/CampaignMember/images/SF-Event-Icon.svg",
+                "title": "",
+                "entrySourceGroupConfigUrl": "jb:///jbint-events/entrysourcegroupconfig.json",
+                "sourceInteractionId": "00000000-0000-0000-0000-000000000000"
+            }
+        }
+    ],
+    "goals": [],
+    "exits": [],
+    "notifiers": [],
+    "entryMode": "NotSet",
+    "definitionType": "Multistep",
+    "channel": "",
+    "defaults": {
+        "email": [
+            "{{Event.SalesforceObje91a55a6941be7f56476271d353ff1a7.\"CampaignMember:Common:Email\"}}"
+        ],
+        "mobileNumber": [
+            "{{Event.SalesforceObje91a55a6941be7f56476271d353ff1a7.\"CampaignMember:MobilePhone\"}}"
+        ],
+        "properties": {
+            "analyticsTracking": {
+                "enabled": false,
+                "analyticsType": "google",
+                "urlDomainsToTrack": []
+            }
+        }
+    },
+    "metaData": {
+        "dataSource": "ContactsModel"
+    },
+    "executionMode": "Production",
+    "status": "Draft",
+    "scheduledStatus": "Draft",
+    "r__folder_Path": "my journeys"
+}

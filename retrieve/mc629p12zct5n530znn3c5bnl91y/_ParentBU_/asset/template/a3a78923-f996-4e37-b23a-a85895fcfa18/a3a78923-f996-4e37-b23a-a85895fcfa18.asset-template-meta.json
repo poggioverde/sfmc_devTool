@@ -1,0 +1,32 @@
+{
+    "customerKey": "a3a78923-f996-4e37-b23a-a85895fcfa18",
+    "assetType": {
+        "name": "template",
+        "displayName": "Template"
+    },
+    "fileProperties": {
+        "fileName": "UTI_Footer_Preference_Center"
+    },
+    "name": "UTI_Footer_Preference_Center",
+    "owner": {
+        "email": "mmoscatelli@deloitte.it",
+        "name": "Marco Moscatelli"
+    },
+    "createdDate": "2024-02-13T08:16:20.867-06:00",
+    "createdBy": {
+        "email": "mmoscatelli@deloitte.it",
+        "name": "Marco Moscatelli"
+    },
+    "modifiedDate": "2024-02-13T08:16:20.867-06:00",
+    "modifiedBy": {
+        "email": "mmoscatelli@deloitte.it",
+        "name": "Marco Moscatelli"
+    },
+    "memberId": 536002575,
+    "status": {
+        "name": "Draft"
+    },
+    "availableViews": [],
+    "modelVersion": 2,
+    "r__folder_Path": "Content Builder/Assets"
+}

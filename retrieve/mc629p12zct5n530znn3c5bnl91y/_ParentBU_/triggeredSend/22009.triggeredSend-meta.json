@@ -1,0 +1,32 @@
+{
+    "CreatedDate": "2023-09-19T03:52:00",
+    "ModifiedDate": "2023-09-19T03:53:00",
+    "CustomerKey": 22009,
+    "Name": "Demo_1 - 67cf3075df454e628e37322963a8a75f",
+    "Description": "Demo_1 - 67cf3075df454e628e37322963a8a75f",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "FromName": "INRES S.C. - UNICOOP TIRRENO SOCIETA' COOPERATIVA",
+    "FromAddress": "riccardo.deri@unicooptirreno.coop.it",
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "Email": {
+        "ID": 8379
+    },
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Demo1",
+    "DynamicEmailSubject": "Demo1",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "HiddenCategory/HiddenJourneyBuilderTriggeredSends/fbd48e39-21d6-4846-93c8-77b533923d50_V1",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

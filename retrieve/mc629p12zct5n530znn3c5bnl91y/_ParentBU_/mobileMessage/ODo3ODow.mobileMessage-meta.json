@@ -1,0 +1,77 @@
+{
+    "id": "ODo3ODow",
+    "lastUpdated": "2023-12-01T11:12:00Z",
+    "type": "ExactTarget.Mobile.Sms.Core.Entities.SmsMessageEntity",
+    "name": "20231201_Training",
+    "origin": "SMS Send",
+    "code": {
+        "code": "394390009272"
+    },
+    "audience": [
+        {
+            "id": "YVBVbU1saFFFZTY2ZGZRRFEtaHRtQTo2Mzow",
+            "name": "",
+            "description": "",
+            "contactCount": 0,
+            "isRefresh": false,
+            "refreshTimeoutInMinutes": 0,
+            "audienceClass": "SFMCAudienceBuilderResultTemplate"
+        }
+    ],
+    "moStartDate": "2023-12-01T09:03:00Z",
+    "mtSendDate": "2023-12-01T11:00:00Z",
+    "template": {
+        "id": "Mzo4MDow",
+        "name": "Outbound"
+    },
+    "status": "Draft",
+    "invalidMessage": "Sorry, but we didn't recognize your email address. Please try again, and remember to leave a space after &lt;keyword&gt;",
+    "responseMessage": "Thanks for Joining.",
+    "publishedMessage": "Text '<keyword>'  to 394390009272.",
+    "isTest": false,
+    "moTimezone": {
+        "offset": 1,
+        "name": "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna *"
+    },
+    "optinType": "NO_OPTIN",
+    "doubleOptinInitialMessage": "",
+    "doubleOptinConfirmMessage": "",
+    "optinMinimumAge": 0,
+    "optinInvalidAgeMessage": "",
+    "numberMessagesPerPeriod": 0,
+    "periodType": "NO_PERIOD",
+    "optinErrorMessage": "",
+    "isDuplicationAllowed": true,
+    "triggeredSendName": "",
+    "isTimeZoneBased": false,
+    "surveyType": "NO_SURVEY",
+    "surveyCorrectResponseMessage": "",
+    "surveyTooManyEntriesMessage": "",
+    "isExpireSet": false,
+    "expireHours": 0,
+    "surveyIncorrectResponseMessage": "",
+    "statusId": 1,
+    "doubleOptinValidResponses": "y|yes",
+    "messagesPerPeriod": 0,
+    "minutesPerPeriod": 0,
+    "subscriberResponseMessage": "",
+    "isSubscriberResponseToAnySubscriptionForShortCode": false,
+    "sendMethod": "USER",
+    "messageObjectId": "Xzg2Qy1MSGh3VWFlcG1RU29ySEQtdzo2MjU6MA",
+    "allowSingleOptin": false,
+    "isSentImmediately": false,
+    "isSuppressMt": false,
+    "smsTriggeredSendDefinitionId": "00000000-0000-0000-0000-000000000000",
+    "fromName": "",
+    "subscriptionKeyword": {
+        "c__codeKeyword": "394390009272.DEM"
+    },
+    "concatenateMessage": true,
+    "isFromNameCertificationAccepted": false,
+    "isCertified": false,
+    "outboundSendTypeFlag": "Audience",
+    "outboundSendBehaviorFlag": "AutoAddSubscribers",
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy"
+}

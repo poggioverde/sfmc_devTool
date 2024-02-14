@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        />
+        <script
+            type="application/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <style class="main_style">
+            @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Montserrat, sans-serif !important;
+                background: #fbf7f6;
+            }
+
+            /* Utility classes */
+            .centered {
+                text-align: center;
+            }
+
+            .mg-b-small {
+                margin-bottom: 15px;
+            }
+
+            .mg-b-tiny {
+                margin-bottom: 5px;
+            }
+
+            .mg-b-medium {
+                margin-bottom: 60px;
+            }
+
+            .mg-t-small {
+                margin-top: 15px;
+            }
+
+            .mg-t-tiny {
+                margin-top: 5px;
+            }
+
+            .mg-t-medium {
+                margin-top: 60px;
+            }
+
+            .btn {
+                width: 200px;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 10px;
+                border: none;
+                font-size: 14px;
+                font-family: inherit;
+            }
+
+            .btn-primary {
+                background-color: #870337;
+                color: #fff;
+            }
+
+            .btn-secondary {
+                background-color: #fff;
+                color: #870337;
+                border: 1px solid #870337;
+            }
+
+            /* *********** */
+
+            a {
+                text-decoration: none;
+            }
+
+            header {
+                background: #870337;
+                color: #fff;
+            }
+
+            header a {
+                color: #fff;
+                font-size: 12px;
+            }
+
+            .header-links {
+                padding: 15px;
+            }
+
+            .logo-wrapper {
+                border-bottom: 2px solid #4a4a49;
+            }
+
+            .logo-wrapper img {
+                width: 150px;
+                padding: 15px 0;
+            }
+
+            .card {
+                margin: 50px auto;
+                background: #ffffff;
+                padding: 32px;
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+                    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+                border-radius: 8px;
+                max-width: 600px;
+                width: 90%;
+                color: #3b3b3b;
+            }
+
+            .card {
+                font-size: 13px;
+            }
+
+            /* slider checkbox  */
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #cccccc;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 13px;
+                width: 13px;
+                left: 2px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+
+            input:checked + .slider {
+                background-color: #870337;
+            }
+
+            input:focus + .slider {
+                box-shadow: 0 0 1px #cccccc;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(23px);
+                -ms-transform: translateX(23px);
+                transform: translateX(23px);
+            }
+
+            .slider.round {
+                border-radius: 14px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+
+            .on {
+                display: none;
+            }
+
+            .on {
+                color: white;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 30%;
+                font-size: 8px;
+                font-weight: bold;
+            }
+
+            .off {
+                color: white;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 70%;
+                font-size: 8px;
+                font-weight: bold;
+            }
+
+            input:checked + .slider .on {
+                display: block;
+            }
+
+            input:checked + .slider .off {
+                display: none;
+            }
+
+            /* *************  */
+
+            .input-flex {
+                display: flex;
+                /* justify-content: space-between; */
+                align-items: center;
+                gap: 30px;
+            }
+
+            .input-flex div {
+                width: 50%;
+            }
+
+            .input-flex a {
+                border-radius: 10px;
+                font-size: 10px;
+                padding: 5px 12px;
+                border: 1px solid #870337;
+                background-color: #870337;
+                color: #fff;
+            }
+
+            .input-flex .item-right {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .input-flex .item-left h3 {
+                font-weight: 500;
+            }
+
+            .input-flex .item-left p {
+                font-size: 10px;
+            }
+
+            .btns-wrapper {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .matita-img {
+                height: 150px;
+                width: 300px;
+            }
+
+            footer {
+                color: #fff;
+                background-color: #4a4a49;
+                font-size: 12px;
+            }
+
+            footer h3 {
+                font-size: 15px;
+            }
+
+            footer a {
+                color: #e30613;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-decoration: underline;
+            }
+            .footer-wrapper {
+                border-bottom: 2px solid #870337;
+                padding: 16px;
+            }
+            .toast-warning {
+                background-color: #870337 !important;
+                font-size: 12px !important;
+            }
+            .toast-info {
+                font-size: 12px !important;
+            }
+            @media only screen and (max-width: 480px) {
+                .input-flex {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 16px;
+                }
+
+                .input-flex div {
+                    width: auto;
+                }
+
+                .input-flex .item-right {
+                    gap: 16px;
+                }
+                .matita-img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- TEST -->
+        <script runat="server">
+            Platform.Load("Core","1.1.1");
+            try{
+        </script>
+        <div style="display: none">
+%%[
+    SET @test = 'testing'
+    IF RequestParameter("submitted") == true THEN
+        SET @test = 'submitted'
+    ENDIF
+]%%
+</div>
+        <script runat="server">
+            }catch (err) {
+             Write("Error Message: " + Stringify(err.message) + Stringify(err.description));
+             Variable.SetValue("@errorMessage", Stringify(err.message) + Stringify(err.description));
+             Variable.SetValue("@errorFlag", true);
+            }
+        </script>
+
+        <!--***** -->
+
+        <header>
+            <div class="header-links">
+                <a href="" target="_blank">Contatti</a>
+                <span>|</span>
+                <a href="" target="_blank">Privacy</a>
+            </div>
+        </header>
+        <!-- <div>
+    %%=v(@test)=%%
+     
+  </div>-->
+        <div class="logo-wrapper centered">
+            <img
+                src="https://image.s51.sfmc-content.com/lib/fe2e11737364047f701375/m/1/edba23e5-6a2c-4a3e-a9b7-1d234f96d8da.png"
+                alt="Logo"
+                srcset=""
+            />
+        </div>
+        <div class="card">
+            <form
+                id="formPreferenceCenter"
+                action="%%=RequestParameter('PAGEURL')=%%"
+                method="post"
+            >
+                <h2 class="centered mg-b-small">Aggiorna le tue preferenze</h2>
+                <p class="mg-b-small">
+                    In questa sezione puoi modificare le tue preferenze e
+                    decidere quali tipologie di comunicazioni ricevere da
+                    Unicoop Tirreno.
+                </p>
+                <div class="input-flex mg-b-small">
+                    <div class="item-left">
+                        <h3 class="mg-b-tiny">Newsletter Commerciale</h3>
+                        <p>
+                            Ogni settimana riceverai aggiornamenti con le ultime
+                            offerte e promozioni di Unicoop Tirreno
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="" class="">Guarda un esempio</a>
+                        <label class="switch">
+                            <input
+                                name="commerciale"
+                                class="newsletter"
+                                type="checkbox"
+                                id="mCommerciale"
+                                style="
+                                    color: #000000;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    margin: 0px;
+                                "
+                            />
+                            <span class="slider round">
+                                <span class="on">SI</span>
+                                <span class="off">NO</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <!-- <div class="input-flex mg-b-small">
+            <div class="item-left">
+                <h3 class="mg-b-tiny">Newsletter Piùscelta </h3>
+                <p>Ogni settimana riceverai più aggiornamenti con le ultime offerte e promozioni di PiùScelta​ </p>
+            </div>
+            <div class="item-right">
+                <a href="" class="">Guarda un esempio</a>
+                <label class="switch">
+                    <input name="commerciale" class="newsletter" type="checkbox" id="mCommerciale"
+                        style="color:#000000;text-align:center;text-decoration:none;font-size:14px;margin:0px;">
+                    <span class="slider round">
+                        <span class="on">SI</span>
+                        <span class="off">NO</span>
+                    </span>
+                </label>
+            </div>
+        </div> -->
+                <div class="input-flex mg-b-small">
+                    <div class="item-left">
+                        <h3 class="mg-b-tiny">Newsletter Novità alla Coop</h3>
+                        <p>
+                            Ogni settimana riceverai le notizie, iniziative e
+                            approfondimenti sulla Cooperativa.
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="" class="">Guarda un esempio</a>
+                        <label class="switch">
+                            <input
+                                name="commerciale"
+                                class="newsletter"
+                                type="checkbox"
+                                id="mCommerciale"
+                                style="
+                                    color: #000000;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    margin: 0px;
+                                "
+                            />
+                            <span class="slider round">
+                                <span class="on">SI</span>
+                                <span class="off">NO</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-flex mg-b-small">
+                    <div class="item-left">
+                        <h3 class="mg-b-tiny">Newsletter Editoriale</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="" class="">Guarda un esempio</a>
+                        <label class="switch">
+                            <input
+                                name="commerciale"
+                                class="newsletter"
+                                type="checkbox"
+                                id="mCommerciale"
+                                style="
+                                    color: #000000;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    margin: 0px;
+                                "
+                            />
+                            <span class="slider round">
+                                <span class="on">SI</span>
+                                <span class="off">NO</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <!-- <div class="input-flex mg-b-small">
+            <div class="item-left">
+                <h3 class="mg-b-tiny">Newsletter Informatore Cultura</h3>
+                <p>Ogni mese in anteprima il calendario di tutte le iniziative ed eventi culturali riservati ai soci
+                    Unicoop Tirreno </p>
+            </div>
+            <div class="item-right">
+                <a href="" class="">Guarda un esempio</a>
+                <label class="switch">
+                    <input name="commerciale" class="newsletter" type="checkbox" id="mCommerciale"
+                        style="color:#000000;text-align:center;text-decoration:none;font-size:14px;margin:0px;">
+                    <span class="slider round">
+                        <span class="on">SI</span>
+                        <span class="off">NO</span>
+                    </span>
+                </label>
+            </div>
+        </div> -->
+                <h2 class="centered mg-b-small mg-t-medium">
+                    Aggiorna i tuoi consensi
+                </h2>
+                <p class="mg-b-small">
+                    In questa sezione puoi modificare i tuoi consensi all'invio
+                    di comunicazioni. Ricorda che puoi aggiornarli in qualsiasi
+                    momento.
+                </p>
+                <div class="input-flex mg-b-small">
+                    <div class="item-left">
+                        <h3 class="mg-b-tiny">Consenso invio comunicazioni</h3>
+                        <p>
+                            Per permettere alla Cooperativa di inviarti
+                            comunicazioni di varia natura consentendoti di
+                            partecipare a eventi, iniziative commerciali,
+                            ricerche di mercato e inviarti questionari e offerte
+                            di prodotti o servizi. L’invio di comunicazioni
+                            commerciali e promozionali relative all’attività e
+                            ai servizi propri del Titolare avverrà attraverso
+                            modalità automatizzate di contatto, nonché con
+                            modalità tradizionali (come e-mail, sms, contatto
+                            telefonico con o senza operatore, posta ordinaria).
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="" class="">Guarda un esempio</a>
+                        <label class="switch">
+                            <input
+                                name="commerciale"
+                                class="marketing-consent"
+                                type="checkbox"
+                                id="mCommerciale"
+                                style="
+                                    color: #000000;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    margin: 0px;
+                                "
+                            />
+                            <span class="slider round">
+                                <span class="on">SI</span>
+                                <span class="off">NO</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="input-flex mg-b-small">
+                    <div class="item-left">
+                        <h3 class="mg-b-tiny">Consenso alla profilazione</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                    <div class="item-right">
+                        <a href="" class="">Guarda un esempio</a>
+                        <label class="switch">
+                            <input
+                                name="commerciale"
+                                type="checkbox"
+                                id="mCommerciale"
+                                style="
+                                    color: #000000;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    margin: 0px;
+                                "
+                            />
+                            <span class="slider round">
+                                <span class="on">SI</span>
+                                <span class="off">NO</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="btns-wrapper mg-t-medium mg-b-medium">
+                    <button class="btn btn-primary" id="buttonSalva">
+                        Conferma
+                    </button>
+                    <input name="submitted" type="hidden" value="true" />
+                    <button class="btn btn-secondary" id="annulla">
+                        Annula
+                    </button>
+                </div>
+                <div class="centered">
+                    <img
+                        src="https://image.s51.sfmc-content.com/lib/fe2e11737364047f701375/m/1/1a8d4829-71eb-4a92-a57f-9fcc0eb98793.png"
+                        class="matita-img"
+                        alt="Matita"
+                    />
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-wrapper mg-b-small">
+                <h3 class="mg-b-small">CHI SIAMO</h3>
+                <p class="mg-b-tiny">
+                    Unicoop Tirreno è una cooperativa di consumatori con oltre
+                    un milione di soci.
+                </p>
+                <p class="mg-b-small">
+                    <a href="">Tutti i dettagli &gt;&gt;</a>
+                </p>
+                <p class="mg-b-tiny">Unicoop Tirreno</p>
+                <p class="mg-b-tiny">S.s. Aurelia km 237</p>
+                <p class="mg-b-tiny">57025 Piombino Li</p>
+                <p class="mg-b-tiny">
+                    cod.fiscale n.iscrizione reg.imprese e part.iva 00103530499
+                </p>
+                <!-- <p class="mg-b-tiny">
+                <a href="">comunica@coopfirenze.it</a>
+            </p>-->
+            </div>
+            <div class="centered" style="padding-bottom: 15px">
+                Copyright © 2023 Unicoop Tirreno sc. Tutti i diritti sono
+                riservati.
+            </div>
+        </footer>
+
+        <script type="application/javascript">
+            $(document).ready(function () {
+                var form = $("#formPreferenceCenter");
+
+                $("#buttonSalva").click(function () {
+                    form.submit();
+                });
+
+                $("#annulla").click((e) => {
+                    e.preventDefault();
+                    window.location.reload(true);
+                });
+
+                $(".newsletter").change(function () {
+                    var el = $(this);
+                    if (
+                        el.prop("checked") &&
+                        !$(".marketing-consent").prop("checked")
+                    ) {
+                        toastr.warning(
+                            "Se vuoi ricevere comunicazioni da parte della Cooperativa devi dare il tuo consenso, comunque sarà sempre possibile revocarlo o disiscriversi dalle newsletter non gradite",
+                            "Consenso Invio Comunicazioni",
+                            { positionClass: "toast-top-center" }
+                        );
+                        //$('.marketing-consent').prop('checked', true);
+                        el.prop("checked", false);
+                        $("html, body").animate(
+                            {
+                                scrollTop:
+                                    $(".marketing-consent").offset().top - 300
+                            },
+                            1000
+                        );
+                    }
+                });
+
+                $(".marketing-consent").change(function () {
+                    var isChecked = $(this).prop("checked");
+                    // console.log(isChecked);
+                    if (isChecked) {
+                        toastr.info(
+                            "Fornendo il consenso riceverai le newsletter della Cooperativa, sarai comunque sempre libero di disiscriverti da quelle non gradite",
+                            "Consenso Invio Comunicazioni",
+                            { positionClass: "toast-top-center" }
+                        );
+                        $(".newsletter").prop("checked", true);
+                    } else {
+                        $(".newsletter").prop("checked", false);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

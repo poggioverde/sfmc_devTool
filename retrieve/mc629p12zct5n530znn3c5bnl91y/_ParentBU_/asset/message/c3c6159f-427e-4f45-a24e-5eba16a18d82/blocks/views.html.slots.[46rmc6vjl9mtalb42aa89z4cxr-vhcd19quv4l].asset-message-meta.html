@@ -1,0 +1,44 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+%%[ IF (([Pdv di riferimento] == "Piombino")) THEN ]%%
+%%=BeginImpressionRegion("01__Rule_1__Wine")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/086c8baa-6a8f-4cbd-8141-cf0a36d7ba74.png"
+                data-assetid="39285"
+                alt="Wine"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ELSEIF (([Pdv di riferimento] == "Elba")) THEN ]%%
+%%=BeginImpressionRegion("01__Rule_2__Birra.jpg")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/59fdcc5a-ded2-4a14-ad20-2a8f17470f96.jpg"
+                data-assetid="39631"
+                alt="Birra.jpg"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ELSE ]%%
+%%=BeginImpressionRegion("01__Default_Content__Wine")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/086c8baa-6a8f-4cbd-8141-cf0a36d7ba74.png"
+                data-assetid="39285"
+                alt="Wine"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ENDIF ]%%
+</td>
+    </tr>
+</table>

@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-10-24T04:02:00",
+    "ModifiedDate": "2023-10-24T04:05:00",
+    "CustomerKey": 27258,
+    "Name": "SP attempt - 17055c5cec294f69af7081c575845490",
+    "Description": "SP attempt - a70b54a0e8d64b80aae8962a3b059bdf",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 802
+    },
+    "FromName": "Comunicazioni Unicoop Tirreno",
+    "FromAddress": "comunicazioni@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 133
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "SP Comunicazioni",
+    "DynamicEmailSubject": "SP Comunicazioni",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/Sender Profiles Attempts/Version 3",
+    "r__assetMessage_Name_readOnly": "SP attempt",
+    "r__assetMessage_Key": "054834e4-095b-47fe-ac7a-569546e558ea",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

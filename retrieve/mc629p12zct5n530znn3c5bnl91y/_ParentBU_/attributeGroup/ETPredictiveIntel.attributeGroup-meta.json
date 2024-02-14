@@ -1,0 +1,52 @@
+{
+    "attributeSetIdentifiers": [
+        "PredictiveIntelAbandonedCartItems",
+        "PredictiveIntelSessionEnds",
+        "PredictiveIntelProfiles",
+        "EinsteinMCPredictiveScores",
+        "PredictiveIntelProductViews",
+        "PredictiveIntelProducts",
+        "PredictiveIntelProductAttribs",
+        "PredictiveIntelProductPurchases",
+        "PredictiveIntelProductSessions",
+        "PredictiveIntelContentViews",
+        "PredictiveIntelContent",
+        "PredictiveIntelContentAttribs",
+        "PredictiveIntelAbandonedCartEvents"
+    ],
+    "isOwner": true,
+    "isSystemDefined": true,
+    "isHidden": false,
+    "canAddProperties": false,
+    "canAddRelationships": true,
+    "canRemove": false,
+    "canChangeProperties": false,
+    "displayOrder": 6,
+    "requiredRelationships": [
+        "2a6b0270-3e59-ed11-ba3e-f40343e7e538",
+        "106a0270-3e59-ed11-ba3e-f40343e7e538",
+        "216a0270-3e59-ed11-ba3e-f40343e7e538",
+        "2f0d0b6a-3e59-ed11-ba3e-f40343e7e538",
+        "016a0270-3e59-ed11-ba3e-f40343e7e538",
+        "ca690270-3e59-ed11-ba3e-f40343e7e538",
+        "a1690270-3e59-ed11-ba3e-f40343e7e538",
+        "5f0d0b6a-3e59-ed11-ba3e-f40343e7e538",
+        "4e0d0b6a-3e59-ed11-ba3e-f40343e7e538",
+        "720d0b6a-3e59-ed11-ba3e-f40343e7e538",
+        "a4690270-3e59-ed11-ba3e-f40343e7e538",
+        "830d0b6a-3e59-ed11-ba3e-f40343e7e538",
+        "b9690270-3e59-ed11-ba3e-f40343e7e538",
+        "d9690270-3e59-ed11-ba3e-f40343e7e538",
+        "ea690270-3e59-ed11-ba3e-f40343e7e538"
+    ],
+    "canModify": false,
+    "applicationKey": "com.exacttarget.Predictive Web",
+    "attributeGroupIconKey": "PredictiveIntel",
+    "attributeGroupType": "Standard",
+    "attributeCount": 106,
+    "definitionName": {
+        "value": "Predictive Intelligence Data"
+    },
+    "definitionKey": "ETPredictiveIntel",
+    "description": ""
+}

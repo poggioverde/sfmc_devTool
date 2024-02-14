@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-09-22T07:47:00",
+    "ModifiedDate": "2024-02-06T02:29:00",
+    "CustomerKey": 22581,
+    "Name": "Degustazione_Pdv - fef5bca5bb634aa596a28e91dda4b47c",
+    "Description": "Degustazione_Pdv - fef5bca5bb634aa596a28e91dda4b47c",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 769
+    },
+    "FromName": "Unicoop Tirreno",
+    "FromAddress": "noreplynews@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 132
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Degustazione_PdV",
+    "DynamicEmailSubject": "Degustazione_PdV",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/Decision_Split_PdV/Version 1",
+    "r__assetMessage_Name_readOnly": "Degustazione_Pdv",
+    "r__assetMessage_Key": "f1aacd43-811c-45fe-a13d-98752e911a98",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2024-02-09T02:04:00",
+    "ModifiedDate": "2024-02-09T02:22:00",
+    "CustomerKey": 46426,
+    "Name": "20240208_DEM_Volantino - 2024 - 216865339583416b97bbe76b2b4e25dc",
+    "Description": "20240208_DEM_Volantino - 2024 - 216865339583416b97bbe76b2b4e25dc",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 803
+    },
+    "FromName": "Offerte Unicoop Tirreno",
+    "FromAddress": "convenienza@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 134
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Scopri le Offerte del Nuovo Volantino Unicoop Tirreno",
+    "DynamicEmailSubject": "Scopri le Offerte del Nuovo Volantino Unicoop Tirreno",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/Demo/Version 1",
+    "r__assetMessage_Name_readOnly": "20240208_DEM_Volantino - 20240209_090109",
+    "r__assetMessage_Key": "8529278a-d2f3-4434-90db-64b462565671",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

@@ -1,0 +1,448 @@
+{
+    "key": "e9d92cf3-77b3-e908-d18e-42490eef3e89",
+    "name": "New Journey - November 24 2023 at 1.47 PM",
+    "lastPublishedDate": "2023-11-24T06:49:48",
+    "description": "",
+    "version": 1,
+    "workflowApiVersion": 1,
+    "createdDate": "2023-11-24T06:49:08.71",
+    "modifiedDate": "2024-02-06T02:23:57.26",
+    "activities": [
+        {
+            "id": "521ecb3e-7de2-44ca-a5e9-2071000a8b56",
+            "key": "SMSSYNC-1",
+            "name": "mySms",
+            "description": "",
+            "type": "SMSSYNC",
+            "outcomes": [
+                {
+                    "key": "da49abe5-1c61-496c-a433-88dc45828be5",
+                    "next": "WAITBYDURATION-1",
+                    "arguments": {},
+                    "metaData": {
+                        "invalid": false
+                    }
+                }
+            ],
+            "arguments": {
+                "contactKey": "{{Contact.Key}}",
+                "defaultSMSAddress": "{{Contact.Default.SMS}}",
+                "mobileNumber": "{{InteractionDefaults.MobileNumber}}",
+                "contactId": "{{Contact.Id}}",
+                "definitionInstanceId": "{{Context.DefinitionInstanceId}}",
+                "definitionId": "{{Context.DefinitionId}}",
+                "eventData": "{{Event}}"
+            },
+            "configurationArguments": {
+                "applicationExtensionKey": "jb-mobile-connect-send-sms-sync",
+                "messageId": "Mzo2MjU6MA",
+                "isOptIn": true,
+                "honorBlackoutWindowEnum": 0,
+                "mobileBlackoutWindowStartTime": "",
+                "mobileBlackoutWindowEndTime": "",
+                "isUsingDEAttributesForPersonalization": true,
+                "description": "",
+                "fromName": "",
+                "isFromNameCertificationAccepted": true,
+                "nextKeywordId": "",
+                "campaignId": 0,
+                "reportingId": "",
+                "isConcatenate": false,
+                "googleCampaignName": "",
+                "shortLinks": "",
+                "r__mobileKeyword_codeKeyword": "394390009272.SI",
+                "c__mobileCode": "394390009272",
+                "r__assetMessage_Name_readOnly": "mySms",
+                "r__assetMessage_Key": "49b727d9-f8bc-4779-b632-eccbbb5c9985"
+            },
+            "metaData": {
+                "icon": "https://jb-mobile-connect.s51.marketingcloudapps.com/images/sms_icon.svg",
+                "iconSmall": "https://jb-mobile-connect.s51.marketingcloudapps.com/images/icon_small.png",
+                "category": "message",
+                "version": "1.2.7",
+                "statsContactIcon": "",
+                "original_icon": "https://jb-mobile-connect.s51.marketingcloudapps.com/images/sms_icon.svg",
+                "original_iconSmall": "https://jb-mobile-connect.s51.marketingcloudapps.com/images/icon_small.png",
+                "sections": {},
+                "isConfigured": true,
+                "showGoogleAnalytics": true,
+                "trackingSettings": {
+                    "isTrackingEnabled": false,
+                    "isCustomCampaign": false
+                },
+                "globals": {
+                    "description": ""
+                },
+                "store": {
+                    "messageDefinition": {
+                        "views": {
+                            "sms": {
+                                "meta": {
+                                    "options": {
+                                        "customBlockData": {
+                                            "display:message": "Ciao %%nome%%! Questo SMS è triggerato da un jb di prova!",
+                                            "shortLinks": []
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "messageConfiguration": {
+                        "selectedCode": {
+                            "countryCode": "IT",
+                            "id": "YkVpVEpjTC14MFcwTEFBSXNDYmctdzo4MTow",
+                            "code": "394390009272"
+                        }
+                    },
+                    "selectedContentBuilderMessage": "Ciao %%nome%%! Questo SMS è triggerato da un jb di prova!"
+                },
+                "shortLinks": "[]"
+            },
+            "schema": {
+                "arguments": {
+                    "smsJobId": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "isAddressCreated": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "isSubscriptionCreated": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "isTriggeredSend": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "isWithinBlackout": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "isValidMobileNumber": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outMessageId": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outKeywordId": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outIsOptIn": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outHonorBlackoutWindowEnum": {
+                        "dataType": "Number",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outMobileBlackoutWindowStartTime": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outMobileBlackoutWindowEndTime": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outUtcOffset": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outWindowStart": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outWindowEnd": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outTimeZoneId": {
+                        "dataType": "Number",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outIsTZValid": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outIsMobileBlackoutWindowEnabled": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outIsUsingDEAttributesForPersonalization": {
+                        "dataType": "Boolean",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "outCountProcessedSingletonDuringBatchMethod": {
+                        "dataType": "LongNumber",
+                        "isNullable": true,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "contactKey": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "defaultSMSAddress": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "mobileNumber": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "contactId": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "definitionInstanceId": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "definitionId": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "eventData": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    }
+                }
+            }
+        },
+        {
+            "id": "13dce493-b6de-48bd-b5ba-a45b4fb54641",
+            "key": "WAITBYDURATION-1",
+            "name": "1 minute",
+            "description": "",
+            "type": "WAIT",
+            "outcomes": [
+                {
+                    "key": "b77be044-c38d-44c1-a53f-e3f64467b652",
+                    "arguments": {},
+                    "metaData": {
+                        "invalid": false
+                    }
+                }
+            ],
+            "arguments": {
+                "waitEndDateAttributeDataBound": "",
+                "waitDefinitionId": "f704ab09-a3f3-441e-83c1-ad73b0982d7e",
+                "waitForEventId": "",
+                "executionMode": "{{Context.ExecutionMode}}",
+                "startActivityKey": "{{Context.StartActivityKey}}",
+                "waitQueueId": "{{Context.WaitQueueId}}"
+            },
+            "configurationArguments": {
+                "waitDuration": 1,
+                "waitUnit": "MINUTES",
+                "specifiedTime": "00:00",
+                "timeZone": "W. Europe Standard Time",
+                "description": "",
+                "waitEndDateAttributeExpression": "",
+                "specificDate": "",
+                "waitForEventKey": ""
+            },
+            "metaData": {
+                "isConfigured": true,
+                "isExtended": false,
+                "waitType": "duration",
+                "guidanceCardKey": "",
+                "uiType": "WAITBYDURATION"
+            },
+            "schema": {
+                "arguments": {
+                    "endDate": {
+                        "dataType": "Date",
+                        "isNullable": false,
+                        "direction": "Out",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitEndDateAttributeDataBound": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitDefinitionId": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitForEventId": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "executionMode": {
+                        "dataType": "Text",
+                        "isNullable": false,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "startActivityKey": {
+                        "dataType": "Text",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    },
+                    "waitQueueId": {
+                        "dataType": "LongNumber",
+                        "isNullable": true,
+                        "direction": "In",
+                        "readOnly": false,
+                        "access": "Hidden"
+                    }
+                }
+            }
+        }
+    ],
+    "triggers": [
+        {
+            "key": "TRIGGER",
+            "name": "TRIGGER",
+            "description": "",
+            "type": "EmailAudience",
+            "outcomes": [],
+            "arguments": {
+                "startActivityKey": "{{Context.StartActivityKey}}",
+                "dequeueReason": "{{Context.DequeueReason}}",
+                "lastExecutedActivityKey": "{{Context.LastExecutedActivityKey}}",
+                "filterResult": "true"
+            },
+            "configurationArguments": {
+                "schemaVersionId": 0,
+                "criteria": "",
+                "filterDefinitionId": "00000000-0000-0000-0000-000000000000"
+            },
+            "metaData": {
+                "sourceInteractionId": "00000000-0000-0000-0000-000000000000",
+                "eventDefinitionKey": "DEAudience-7407daf8-b872-c979-1e4c-0eb9e3c6b121",
+                "chainType": "None",
+                "configurationRequired": false,
+                "iconUrl": "/images/icon-data-extension.svg",
+                "title": "Data Extension",
+                "entrySourceGroupConfigUrl": "jb:///data/entry/audience/entrysourcegroupconfig.json"
+            }
+        }
+    ],
+    "goals": [],
+    "exits": [],
+    "notifiers": [],
+    "entryMode": "MultipleEntries",
+    "definitionType": "Multistep",
+    "channel": "",
+    "defaults": {
+        "email": [
+            "{{Event.DEAudience-7407daf8-b872-c979-1e4c-0eb9e3c6b121.\"email\"}}"
+        ],
+        "mobileNumber": [
+            "{{Event.DEAudience-7407daf8-b872-c979-1e4c-0eb9e3c6b121.\"Telefono\"}}"
+        ],
+        "properties": {
+            "analyticsTracking": {
+                "enabled": false,
+                "analyticsType": "google",
+                "urlDomainsToTrack": []
+            }
+        }
+    },
+    "metaData": {
+        "dataSource": "ContactsModel"
+    },
+    "executionMode": "Production",
+    "status": "Stopped",
+    "scheduledStatus": "Draft",
+    "r__folder_Path": "my journeys"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Audience Backup",
+    "description": "",
+    "key": "53079a1d-df3a-3461-4e79-69431cee0d25",
+    "type": "scheduled",
+    "status": "Scheduled",
+    "schedule": {
+        "startDate": "2023-12-14T18:00:00",
+        "endDate": "2079-06-06T00:00:00",
+        "icalRecur": "FREQ=DAILY;UNTIL=20790606T080000;INTERVAL=1",
+        "timezoneName": "W. Europe Standard Time"
+    },
+    "steps": [
+        {
+            "name": "",
+            "activities": [
+                {
+                    "name": "Audience_qa",
+                    "r__type": "query"
+                }
+            ]
+        }
+    ],
+    "notifications": [
+        {
+            "email": [
+                "mmoscatelli@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        },
+        {
+            "email": [
+                "mnagero@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        }
+    ],
+    "r__folder_Path": "my automations/UTI"
+}

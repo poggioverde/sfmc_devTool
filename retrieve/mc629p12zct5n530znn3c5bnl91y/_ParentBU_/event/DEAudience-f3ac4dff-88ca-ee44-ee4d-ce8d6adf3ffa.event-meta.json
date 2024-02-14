@@ -1,0 +1,35 @@
+{
+    "type": "EmailAudience",
+    "name": "Decision_Split_PdV",
+    "description": "",
+    "createdDate": "2023-09-22T07:44:58.163",
+    "createdBy": 737211176,
+    "modifiedDate": "2023-09-22T07:44:58.163",
+    "modifiedBy": 737211176,
+    "mode": "Production",
+    "eventDefinitionKey": "DEAudience-f3ac4dff-88ca-ee44-ee4d-ce8d6adf3ffa",
+    "dataExtensionName": "Training_PdV",
+    "sourceApplicationExtensionId": "97e942ee-6914-4d3d-9e52-37ecb71f79ed",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/images/icon-data-extension.svg",
+    "arguments": {
+        "serializedObjectType": 3,
+        "useHighWatermark": false,
+        "eventDefinitionKey": "DEAudience-f3ac4dff-88ca-ee44-ee4d-ce8d6adf3ffa",
+        "dataExtensionId": "EB70293E-B8A9-4A3B-B047-75CFB4A75E4F",
+        "criteria": ""
+    },
+    "metaData": {
+        "criteriaDescription": "",
+        "scheduleFlowMode": "runOnce",
+        "runOnceScheduleMode": "onPublish",
+        "scheduleState": "No Schedule"
+    },
+    "interactionCount": 1,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Audience",
+    "publishedInteractionCount": 0,
+    "automationId": "fa23bbda-e690-4aa2-a843-71ee150316fb",
+    "disableDEDataLogging": false
+}

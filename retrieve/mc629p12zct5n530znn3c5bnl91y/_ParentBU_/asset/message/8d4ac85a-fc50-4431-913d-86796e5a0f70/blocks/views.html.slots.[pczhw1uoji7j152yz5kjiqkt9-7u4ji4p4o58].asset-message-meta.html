@@ -1,0 +1,54 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+            <div display:none;="">
+%%[
+    VAR @newsletterType, @newsletterLabel, @customerKey, @recordTypeId, @email
+    SET @newsletterType = 'Commerciale'
+    SET @newsletterLabel = 'Commerciale'
+    SET @customerKey = AttributeValue("AccountId")
+    SET @email = AttributeValue("Email")
+    SET @recordTypeId = AttributeValue("AccountRecordTypeId__c")
+]%%
+</div>
+            <div style="text-align: center">
+                <span style="font-size: 11pt"
+                    ><span style="line-height: 107%"
+                        ><span
+                            style="
+                                font-family: Calibri, sans-serif;
+                                color: #808080;
+                            "
+                            >Hai ricevuto questa email perch&eacute; sei
+                            iscritto alla newsletter commerciale di Unicoop
+                            Tirreno.<br />
+                            Se non desideri pi&ugrave; ricevere questo tipo di
+                            comunicazione,&nbsp;
+                            <u>
+                                <a
+                                    alias="cancella la tua iscrizione"
+                                    conversion="false"
+                                    data-linkto="http://"
+                                    href="%%=RedirectTo(CloudPagesURL(885,'nt',@newsletterType,'nl',@newsletterLabel,'ck',@customerKey,'rt',@recordTypeId,'em',@email))=%%"
+                                    style="
+                                        color: #808080;
+                                        text-decoration: underline;
+                                    "
+                                    title="cancella la tua iscrizione"
+                                    >clicca qui</a
+                                >
+                            </u>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </td>
+    </tr>
+</table>

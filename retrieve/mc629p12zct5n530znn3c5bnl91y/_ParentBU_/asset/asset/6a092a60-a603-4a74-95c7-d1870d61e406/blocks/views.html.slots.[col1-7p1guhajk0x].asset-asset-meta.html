@@ -1,0 +1,575 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+            <div style="text-align: center">
+                <a href="https://www.unicooptirreno.it/" target="_blank"
+                    ><img
+                        src="https://www.unicooptirreno.it/sites/all/themes/unicooptirreno2019/images/logo.svg"
+                        style="width: 200px; height: auto"
+                /></a>
+                <h3 style="color: #860337">KPI Comunicazioni</h3>
+            </div>
+
+            <br /><br />
+            <div id="filters">
+                <div class="boxSelect">
+                    <select id="audienceSelect">
+                        <option value="-1">Audience</option>
+%%[
+    SET @audience_rows = LookupRows("Audience_DE", "Return", 1)
+    SET @rowCountAudience = rowcount(@audience_rows)
+    IF @rowCountAudience > 0 THEN
+        FOR @I = 1 TO @ROWCOUNTAUDIENCE DO
+            SET @audience_row = row(@audience_rows, @i)
+            SET @audienceName = field(@audience_row, "Audience")
+            output(concat(
+                    '<option value="',
+                    @audienceName,
+                    '">',
+                    @audienceName,
+                    '</option>'
+                ))
+        NEXT @i
+    ENDIF
+]%%
+</select
+                    >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <label class="container"
+                        >Newsletter
+                        <input
+                            type="checkbox"
+                            id="chkEmail"
+                            value="Newsletter"
+                        />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"
+                        >Marketing Journey
+                        <input
+                            type="checkbox"
+                            id="chkJourney"
+                            value="MarketingJourney"
+                        />
+                        <span class="checkmark"></span>
+                    </label>
+                    <img
+                        id="mailImage"
+                        src="http://image.email.unicoopfirenze.it/lib/fe38117075640475741174/m/2/c52d0dd9-654b-4b79-af8c-ce7806ee11ae.png"
+                        style="
+                            width: 30px;
+                            cursor: pointer;
+                            padding-left: 10px;
+                            vertical-align: middle;
+                        "
+                        alt="E-Mail"
+                        title="E-Mail"
+                    />
+                    <img
+                        id="smsImage"
+                        src="http://image.email.unicoopfirenze.it/lib/fe38117075640475741174/m/2/a912fba4-70dc-4ed0-8c83-fb7fa8642b93.png"
+                        style="
+                            width: 30px;
+                            cursor: pointer;
+                            padding-left: 10px;
+                            vertical-align: middle;
+                        "
+                        alt="SMS"
+                        title="SMS"
+                    />
+                    <img
+                        id="exportImage"
+                        src="http://image.email.unicoopfirenze.it/lib/fe38117075640475741174/m/2/58e5069e-e97b-4b71-a707-42dd04cff2f0.png"
+                        style="
+                            width: 30px;
+                            cursor: pointer;
+                            padding-left: 10px;
+                            vertical-align: middle;
+                        "
+                        alt="Esporta"
+                        title="Esporta"
+                    />
+                </div>
+            </div>
+            <div id="emailContainer">
+                <br />
+                <div id="divHiddenAmp" style="display: none">
+%%[
+    SET @numRowsToReturn = 0
+    SET @EmailRows = LookupOrderedRows(
+        "KPI_UltimoMese",
+        @numRowsToReturn,
+        "SentTime desc",
+        "Return",
+        1
+    )
+    SET @EmailCount = RowCount(@EmailRows)
+    IF RowCount(@EmailRows) > 0 THEN
+        FOR @ROWS = 1 TO @EMAILCOUNT DO
+            SET @EmailRow = Row(@EmailRows, @Rows)
+            SET @EmailName = Field(@EmailRow, "EmailName")
+            SET @Sent = Field(@EmailRow, "Sent")
+            SET @SentTime = Field(@EmailRow, "SentTime")
+            SET @UnsubRate = Field(@EmailRow, "UnsubRate")
+            SET @BounceRate = Field(@EmailRow, "BounceRate")
+            SET @OpenRate = Field(@EmailRow, "OpenRate")
+            SET @CTR = Field(@EmailRow, "CTR")
+            SET @sendclass = Field(@EmailRow, "SendClassification")
+            SET @opens = Field(@EmailRow, "Opens")
+            SET @uniqueOpens = Field(@EmailRow, "UniqueOpens")
+            SET @tipo = Field(@EmailRow, "tipo")
+            SET @clicks = Field(@EmailRow, "Clicks")
+            SET @uniqueClicks = Field(@EmailRow, "UniqueClicks")
+            SET @bounces = Field(@EmailRow, "bounces")
+            SET @unsubscribes = Field(@EmailRow, "unsubscribes")
+            SET @delivered = Field(@EmailRow, "Delivered")
+            SET @deliveredRate = Field(@EmailRow, "DeliveredRate")
+]%%
+</div>
+
+                <div style="border: 1px solid #860337" class="searchable">
+                    <h3
+                        style="
+                            color: #666;
+                            text-align: center;
+                            font-family: Roboto, sans-serif;
+                            font-size: 22px;
+                        "
+                    >
+                        %%=v(@EmailName)=%%
+                    </h3>
+                    <div
+                        style="
+                            font-family: Roboto, sans-serif;
+                            text-align: center;
+                            overflow-x: auto;
+                        "
+                    >
+                        <table>
+                            <tr>
+                                <td style="width: 100px">Invio:</td>
+                                <td>
+                                    <b
+                                        >%%=FormatDate(@SentTime,
+                                        "dd/MM/YYYY")=%%</b
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inviato a:</td>
+                                <td>
+                                    <b
+                                        >%%=FormatNumber(v(@Sent),
+                                        "N0","it-IT")=%%</b
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Audience:</td>
+                                <td>
+                                    <b>%%=v(@sendclass)=%%</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tipo:</td>
+                                <td>
+                                    <b>%%=v(@tipo)=%%</b>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="overflow-x: auto">
+                        <table
+                            style="
+                                width: 100%;
+                                font-family: 'Roboto Slab', Georgia,
+                                    'Times New Roman', Times, serif;
+                            "
+                        >
+                            <tr>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Unsub.
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    % Unsub.
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Bounces
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    % Bounce
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Opens
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    U. Opens
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    % Open
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Clicks
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    U. Clicks
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    % Click
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Delivered
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    % Delivered
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@unsubscribes),
+                                    "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@UnsubRate)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@bounces),
+                                    "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@BounceRate)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@opens), "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@uniqueOpens),
+                                    "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@OpenRate)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@clicks), "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@uniqueClicks),
+                                    "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@CTR)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatNumber(v(@delivered),
+                                    "N0","it-IT")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@deliveredRate)=%%
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+        %%[
+        NEXT
+    ENDIF
+        ]%%
+</div>
+            </div>
+
+            <!-- SMS-->
+            <div id="smsContainer">
+                <div id="divHiddenAmpSMS" style="display: none">
+%%[
+    SET @numRowsToReturnSMS = 0
+    SET @EmailRowsSMS = LookupOrderedRows(
+        "smsTrackingInfo",
+        @numRowsToReturnSMS,
+        "CreateDateTime desc",
+        "Return",
+        1
+    )
+    SET @EmailCountSMS = RowCount(@EmailRowsSMS)
+    IF RowCount(@EmailRowsSMS) > 0 THEN
+        FOR @ROWSSMS = 1 TO @EMAILCOUNTSMS DO
+            SET @EmailRowSMS = Row(@EmailRowsSMS, @RowsSMS)
+            SET @nameSMS = Field(@EmailRowSMS, "Name")
+            SET @dataInvioSMS = Field(@EmailRowSMS, "CreateDateTime")
+            SET @numeroInvii = Field(@EmailRowSMS, "NumeroInvii")
+            SET @nomeJourney = Field(@EmailRowSMS, "nomeJourney")
+            SET @tipologiaSms = Field(@EmailRowSMS, "tipologia")
+]%%
+</div>
+
+                <div style="border: 1px solid #860337" class="searchable">
+                    <h3
+                        style="
+                            color: #666;
+                            text-align: center;
+                            line-height: 0.5;
+                            font-family: Roboto, sans-serif;
+                            font-size: 22px;
+                        "
+                    >
+                        %%=v(@nameSMS)=%%
+                    </h3>
+                    <div style="overflow-x: auto; overflow: scroll">
+                        <table
+                            style="
+                                width: 100%;
+                                font-family: 'Roboto Slab', Georgia,
+                                    'Times New Roman', Times, serif;
+                            "
+                        >
+                            <tr>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Journey
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Data Invio
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    # Invii
+                                </th>
+                                <th
+                                    style="
+                                        background-color: #860337;
+                                        color: #fff;
+                                        padding: 10px;
+                                        border-bottom: 1px solid black;
+                                        text-align: center;
+                                    "
+                                >
+                                    Tipologia
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@nomeJourney)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=FormatDate(@dataInvioSMS,
+                                    "dd/MM/YYYY")=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@numeroInvii)=%%
+                                </td>
+                                <td style="padding: 10px; text-align: center">
+                                    %%=v(@tipologiaSms)=%%
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+        %%[
+        NEXT
+    ENDIF
+        ]%%
+</div>
+            </div>
+            <!-- export management-->
+            <table id="my-table" style="color: white; font-size: 1px">
+                <tr>
+                    <th>Nome</th>
+                    <th>Invio</th>
+                    <th># Invii</th>
+                    <th>Audience</th>
+                    <th>Tipo</th>
+                    <th>Unsubscribes</th>
+                    <th>Unsubscribe Rate</th>
+                    <th>Bounces</th>
+                    <th>Bounce Rate</th>
+                    <th>Opens</th>
+                    <th>Unique Opens</th>
+                    <th>Open Rate</th>
+                    <th>Clicks</th>
+                    <th>Unique Clicks</th>
+                    <th>Click Rate</th>
+                    <!--<th>Delivered</th>
+        <th>Delivered Rate</th>-->
+                </tr>
+%%[
+    SET @numRowsToReturn = 0
+    SET @EmailRows = LookupOrderedRows(
+        "KPI_UltimoMese",
+        @numRowsToReturn,
+        "SentTime desc",
+        "Return",
+        1
+    )
+    SET @EmailCount = RowCount(@EmailRows)
+    IF RowCount(@EmailRows) > 0 THEN
+        FOR @ROWS = 1 TO @EMAILCOUNT DO
+            SET @EmailRow = Row(@EmailRows, @Rows)
+            SET @EmailName = Field(@EmailRow, "EmailName")
+            SET @Sent = Field(@EmailRow, "Sent")
+            SET @SentTime = Field(@EmailRow, "SentTime")
+            SET @UnsubRate = Field(@EmailRow, "UnsubRate")
+            SET @BounceRate = Field(@EmailRow, "BounceRate")
+            SET @OpenRate = Field(@EmailRow, "OpenRate")
+            SET @CTR = Field(@EmailRow, "CTR")
+            SET @sendclass = Field(@EmailRow, "SendClassification")
+            SET @opens = Field(@EmailRow, "Opens")
+            SET @uniqueOpens = Field(@EmailRow, "UniqueOpens")
+            SET @tipo = Field(@EmailRow, "tipo")
+            SET @clicks = Field(@EmailRow, "Clicks")
+            SET @uniqueClicks = Field(@EmailRow, "UniqueClicks")
+            SET @bounces = Field(@EmailRow, "bounces")
+            SET @unsubscribes = Field(@EmailRow, "unsubscribes")
+            SET @delivered = Field(@EmailRow, "Delivered")
+            SET @deliveredRate = Field(@EmailRow, "DeliveredRate")
+]%%
+<tr>
+                    <td>%%=v(@EmailName)=%%</td>
+                    <td>%%=FormatDate(@SentTime, "dd/MM/YYYY")=%%</td>
+                    <td>%%=FormatNumber(v(@Sent), "N0","it-IT")=%%</td>
+                    <td>%%=v(@sendclass)=%%</td>
+                    <td>%%=v(@tipo)=%%</td>
+                    <td>%%=FormatNumber(v(@unsubscribes), "N0","it-IT")=%%</td>
+                    <td>%%=v(@UnsubRate)=%%</td>
+                    <td>%%=FormatNumber(v(@bounces), "N0","it-IT")=%%</td>
+                    <td>%%=v(@BounceRate)=%%</td>
+                    <td>%%=FormatNumber(v(@opens), "N0","it-IT")=%%</td>
+                    <td>%%=FormatNumber(v(@uniqueOpens), "N0","it-IT")=%%</td>
+                    <td>%%=v(@OpenRate)=%%</td>
+                    <td>%%=FormatNumber(v(@clicks), "N0","it-IT")=%%</td>
+                    <td>%%=FormatNumber(v(@uniqueClicks), "N0","it-IT")=%%</td>
+                    <td>%%=v(@CTR)=%%</td>
+                    <!--<td>%=v(@delivered)=%%</td>
+            <td>%=v(@deliveredRate)=%%</td>-->
+                </tr>
+        %%[
+        NEXT @i
+    ELSE
+    ENDIF
+        ]%%
+</table>
+            <!-- end export management-->
+        </td>
+    </tr>
+</table>

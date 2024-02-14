@@ -1,0 +1,161 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+%%[
+    SET @numRowsToReturn = 0
+    SET @rows = LookupOrderedRows(
+        "KPI_UltimoMese",
+        @numRowsToReturn,
+        "SentTime desc",
+        "Return",
+        1
+    )
+    SET @rowCount = rowcount(@rows)
+    IF @rowCount > 0 THEN
+        SET @prevOrderNo = ""
+        FOR @I = 1 TO @ROWCOUNT DO
+            SET @row = row(@rows, @i)
+            SET @eName = field(@row, "EmailName")
+            IF not empty(@eName) THEN
+]%%
+<br />
+            %%=v(@eName)=%%<br />
+            <div class="container">
+                <table class="test">
+            %%[
+                SET @Sent = field(@row, "Sent")
+                SET @Unsubscribes = field(@row, "Unsubscribes")
+                SET @Opens = field(@row, "Opens")
+                SET @Bounces = field(@row, "Bounces")
+                SET @Clicks = field(@row, "Clicks")
+                SET @jobId = field(@row, "JobID")
+                SET @delivered = field(@row, "Delivered")
+                SET @OpenRate = Field(@row, "OpenRate")
+                SET @BounceRate = Field(@row, "BounceRate")
+                SET @deliveredRate = Field(@row, "DeliveredRate")
+                SET @UnsubRate = Field(@row, "UnsubRate")
+                SET @CTR = Field(@row, "CTR")
+            ]%%
+<thead>
+                        <tr>
+                            <th>Sent</th>
+                            <th>Unsubscribes</th>
+                            <th>Opens</th>
+                            <th>Bounces</th>
+                            <th>Clicks</th>
+                            <th>Delivered</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>%%=v(@Sent)=%%</td>
+                        <td>%%=v(@Unsubscribes)=%%</td>
+                        <td>%%=v(@Opens)=%%</td>
+                        <td>%%=v(@Bounces)=%%</td>
+                        <td>%%=v(@Clicks)=%%</td>
+                        <td>%%=v(@delivered)=%%</td>
+                    </tr>
+                </table>
+                <div class="chart-container">
+                    <canvas id="opensBarChart_%%=v(@jobId)=%%"></canvas>
+                    <canvas id="clicksPieChart_%%=v(@jobId)=%%"></canvas>
+                </div>
+                <script>
+                    //bar chart
+                    var ctxBar = document.getElementById(
+                        "opensBarChart_%%=v(@jobId)=%%"
+                    );
+                    var opensBarChart = new Chart(ctxBar, {
+                        type: "bar",
+                        data: {
+                            labels: ["Opens", "Clicks", "Bounces"],
+                            datasets: [
+                                {
+                                    label: "Statistiche",
+                                    data: [
+                                        "%%=v(@Opens)=%%",
+                                        "%%=v(@Clicks)=%%",
+                                        "%%=v(@Bounces)=%%"
+                                    ],
+                                    backgroundColor: [
+                                        "rgba(229, 5, 19, 0.2)",
+                                        "rgba(0, 0, 0, 0.2)",
+                                        "rgba(255, 255, 255, 0.2)"
+                                    ],
+                                    borderColor: [
+                                        "rgba(229, 5, 19, 1)",
+                                        "rgba(0, 0, 0, 1)",
+                                        "rgba(255, 255, 255, 1)"
+                                    ],
+                                    borderWidth: 1
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+
+                    //pie chart
+                    var ctxPie = document.getElementById(
+                        "clicksPieChart_%%=v(@jobId)=%%"
+                    );
+                    var clicksPieChart = new Chart(ctxPie, {
+                        type: "pie",
+                        data: {
+                            labels: [
+                                "Open Rate",
+                                "Bounce Rate",
+                                "Delivery Rate"
+                            ],
+                            datasets: [
+                                {
+                                    label: "Rates",
+                                    data: [
+                                        "%%=v(@OpenRate)=%%",
+                                        "%%=v(@BounceRate)=%%",
+                                        "%%=v(@deliveredRate)=%%"
+                                    ],
+                                    backgroundColor: [
+                                        "rgba(229, 5, 19, 0.5)",
+                                        "rgba(0, 0, 0, 0.5)",
+                                        "rgba(255, 255, 255, 0.5)"
+                                    ],
+                                    borderColor: [
+                                        "rgba(229, 5, 19, 1)",
+                                        "rgba(0, 0, 0, 1)",
+                                        "rgba(255, 255, 255, 1)"
+                                    ],
+                                    borderWidth: 1
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true
+                        }
+                    });
+                </script>
+            </div>
+            <br />
+            %%[
+            ENDIF
+        NEXT @i
+    ELSE
+            ]%%
+
+%%[ ENDIF ]%%
+</td>
+    </tr>
+</table>

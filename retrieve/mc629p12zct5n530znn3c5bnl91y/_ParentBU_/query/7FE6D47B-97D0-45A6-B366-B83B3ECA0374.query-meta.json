@@ -1,0 +1,11 @@
+{
+    "name": "qa_4",
+    "key": "7FE6D47B-97D0-45A6-B366-B83B3ECA0374",
+    "description": "",
+    "targetKey": "8EEEAAF1-F398-4E58-ADF7-7E5ED11C1A55",
+    "createdDate": "2023-11-09T03:55:40.38",
+    "modifiedDate": "2023-11-09T03:56:26.27",
+    "targetUpdateTypeName": "Update",
+    "isFrozen": false,
+    "r__folder_Path": "Query"
+}

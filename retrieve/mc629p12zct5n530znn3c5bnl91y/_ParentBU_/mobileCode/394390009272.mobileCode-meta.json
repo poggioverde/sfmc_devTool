@@ -1,0 +1,15 @@
+{
+    "code": "394390009272",
+    "countryCode": "IT",
+    "codeType": "SHARED",
+    "isGsmCharacterSetOnly": false,
+    "isMms": false,
+    "sendableCountries": [
+        {
+            "countryCode": "IT",
+            "vendor": "CLX",
+            "fromNameSupported": true
+        }
+    ],
+    "supportsConcatenation": true
+}

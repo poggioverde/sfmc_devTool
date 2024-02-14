@@ -1,0 +1,44 @@
+{
+    "type": "EmailAudience",
+    "name": "New Journey - September 20 2023 at 3.47 PM",
+    "description": "",
+    "createdDate": "2023-09-20T08:08:47.073",
+    "createdBy": 737211176,
+    "modifiedDate": "2023-09-20T08:08:47.073",
+    "modifiedBy": 737211176,
+    "mode": "Production",
+    "eventDefinitionKey": "DEAudience-f35c3fcc-39fa-74be-38d7-426989b88b23",
+    "dataExtensionName": "___Training_PdV_1",
+    "sourceApplicationExtensionId": "97e942ee-6914-4d3d-9e52-37ecb71f79ed",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/images/icon-data-extension.svg",
+    "arguments": {
+        "serializedObjectType": 3,
+        "useHighWatermark": false,
+        "eventDefinitionKey": "DEAudience-f35c3fcc-39fa-74be-38d7-426989b88b23",
+        "dataExtensionId": "c9534e15-b757-ee11-ba75-f40343e86d98",
+        "criteria": ""
+    },
+    "metaData": {
+        "criteriaDescription": "",
+        "scheduleFlowMode": "runOnce",
+        "runOnceScheduleMode": "onSchedule"
+    },
+    "schedule": {
+        "startDateTime": "2023-09-25T00:00:00",
+        "endDateTime": "2023-09-25T00:00:00",
+        "timeZone": "W. Europe Standard Time",
+        "occurrences": 1,
+        "endType": "Occurrences",
+        "frequency": "Daily",
+        "recurrencePattern": "Interval",
+        "interval": 1
+    },
+    "interactionCount": 1,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Audience",
+    "publishedInteractionCount": 0,
+    "automationId": "4ac5b314-9dda-4525-90dd-1d97c6777614",
+    "disableDEDataLogging": false
+}

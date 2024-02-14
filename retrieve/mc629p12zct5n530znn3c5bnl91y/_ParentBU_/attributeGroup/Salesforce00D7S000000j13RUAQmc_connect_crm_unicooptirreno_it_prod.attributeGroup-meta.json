@@ -1,0 +1,29 @@
+{
+    "attributeSetIdentifiers": [
+        "Salesforce00D7S000000j13RUAQPunto_Vendita__c",
+        "Salesforce00D7S000000j13RUAQAccount",
+        "Salesforce00D7S000000j13RUAQContact"
+    ],
+    "isOwner": true,
+    "isSystemDefined": true,
+    "isHidden": false,
+    "canAddProperties": true,
+    "canAddRelationships": false,
+    "canRemove": false,
+    "canChangeProperties": true,
+    "displayOrder": 7,
+    "requiredRelationships": [
+        "2dfc668b-2a6c-ee11-ba75-f40343e86d98",
+        "4bafd4bf-302a-ee11-ba48-f40343e871c8",
+        "5d71e6ef-f626-ee11-ba48-f40343e871c8"
+    ],
+    "canModify": false,
+    "applicationKey": "com.exacttarget.Salesforce Synchronized Data Source",
+    "attributeGroupType": "Standard",
+    "attributeCount": 40,
+    "definitionName": {
+        "value": "Unicoop Tirreno mc_connect_crm_unicooptirreno_it_prod"
+    },
+    "definitionKey": "Salesforce00D7S000000j13RUAQmc_connect_crm_unicooptirreno_it_prod",
+    "description": ""
+}

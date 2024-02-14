@@ -1,0 +1,15 @@
+{
+    "name": "ar-sms",
+    "definitionKey": "AR_SendAzureCodeSMS",
+    "description": "Created via REST",
+    "status": "Active",
+    "createdDate": "2024-02-07T08:13:00",
+    "modifiedDate": "2024-02-07T08:13:00",
+    "subscriptions": {
+        "shortCode": "394390009272",
+        "countryCode": "",
+        "autoAddSubscriber": true,
+        "updateSubscriber": true,
+        "keyword": "TXNSMS"
+    }
+}

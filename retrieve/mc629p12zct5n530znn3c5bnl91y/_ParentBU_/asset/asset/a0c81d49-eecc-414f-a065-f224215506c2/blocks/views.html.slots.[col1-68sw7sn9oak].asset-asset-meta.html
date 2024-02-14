@@ -1,0 +1,52 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+%%[
+    VAR @sid, @jid, @reason, @lue, @lue_prop, @lue_statusCode, @overallStatus, @requestId, @Response, @Status, @Error
+    SET @sid = AttributeValue("_subscriberkey")
+    SET @jid = AttributeValue("jobid")
+    SET @listid = AttributeValue("listid")
+    SET @batchid = AttributeValue("_jobSubscriberbatchid")
+    SET @reason = "One Click Email Unsubscribe"
+    IF NOT EMPTY(@sid) AND NOT EMPTY(@jid) AND NOT EMPTY(@listid) THEN
+        SET @lue = CreateObject("ExecuteRequest")
+        SetObjectProperty(@lue, "Name", "LogUnsubEvent")
+        SET @lue_prop = CreateObject("APIProperty")
+        SetObjectProperty(@lue_prop, "Name", "SubscriberKey")
+        SetObjectProperty(@lue_prop, "Value", @sid)
+        AddObjectArrayItem(@lue, "Parameters", @lue_prop)
+        SET @lue_prop = CreateObject("APIProperty")
+        SetObjectProperty(@lue_prop, "Name", "JobID")
+        SetObjectProperty(@lue_prop, "Value", @jid)
+        AddObjectArrayItem(@lue, "Parameters", @lue_prop)
+        SET @lue_prop = CreateObject("APIProperty")
+        SetObjectProperty(@lue_prop, "Name", "ListID")
+        SetObjectProperty(@lue_prop, "Value", @listid)
+        AddObjectArrayItem(@lue, "Parameters", @lue_prop)
+        SET @lue_prop = CreateObject("APIProperty")
+        SetObjectProperty(@lue_prop, "Name", "BatchID")
+        SetObjectProperty(@lue_prop, "Value", @batchid)
+        AddObjectArrayItem(@lue, "Parameters", @lue_prop)
+        SET @lue_prop = CreateObject("APIProperty")
+        SetObjectProperty(@lue_prop, "Name", "Reason")
+        SetObjectProperty(@lue_prop, "Value", @reason)
+        AddObjectArrayItem(@lue, "Parameters", @lue_prop)
+        SET @lue_statusCode = InvokeExecute(@lue, @overallStatus, @requestId)
+        SET @Response = Row(@lue_statusCode, 1)
+        SET @Status = Field(@Response, "StatusMessage")
+        SET @Error = Field(@Response, "ErrorCode")
+        outputline(concat("Status: ", @Status))
+    ELSE
+        outputline(concat("Click sul link dell'email per disiscriverti.", ""))
+    ENDIF
+]%%
+</td>
+    </tr>
+</table>

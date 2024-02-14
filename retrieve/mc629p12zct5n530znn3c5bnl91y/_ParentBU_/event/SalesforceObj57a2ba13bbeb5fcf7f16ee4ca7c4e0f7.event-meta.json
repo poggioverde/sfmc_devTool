@@ -1,0 +1,82 @@
+{
+    "type": "SalesforceObjectTriggerV2",
+    "name": "New Journey - July 24 2023 at 5.45 PM",
+    "description": "",
+    "createdDate": "2023-07-24T08:48:12.177",
+    "createdBy": 737195986,
+    "modifiedDate": "2023-07-24T08:48:12.177",
+    "modifiedBy": 737195986,
+    "mode": "Production",
+    "eventDefinitionKey": "SalesforceObj57a2ba13bbeb5fcf7f16ee4ca7c4e0f7",
+    "dataExtensionName": "New Journey - July 24 2023 at 545 PM - 2023-07-24T084811954",
+    "schema": {
+        "id": "0e73381c-312a-ee11-ba48-f40343e871c8",
+        "name": "New Journey - July 24 2023 at 545 PM - 2023-07-24T084811954",
+        "fields": [
+            {
+                "name": "Account:Id",
+                "dataType": "Text",
+                "maxLength": "18",
+                "isNullable": false,
+                "isPrimaryKey": false,
+                "isDevicePreference": false
+            },
+            {
+                "name": "Account:Name",
+                "dataType": "Text",
+                "maxLength": "255",
+                "isNullable": true,
+                "isPrimaryKey": false,
+                "isDevicePreference": false
+            },
+            {
+                "name": "Account:Phone",
+                "dataType": "Phone",
+                "maxLength": "40",
+                "isNullable": true,
+                "isPrimaryKey": false,
+                "isDevicePreference": false
+            },
+            {
+                "name": "Account:CreatedBy:Email",
+                "dataType": "EmailAddress",
+                "maxLength": "128",
+                "isNullable": true,
+                "isPrimaryKey": false,
+                "isDevicePreference": false
+            },
+            {
+                "name": "Account:CreatedBy:Id",
+                "dataType": "Text",
+                "maxLength": "18",
+                "isNullable": false,
+                "isPrimaryKey": false,
+                "isDevicePreference": false
+            }
+        ],
+        "sendableCustomObjectField": "Account:CreatedBy:Id",
+        "sendableSubscriberField": "_SubscriberKey",
+        "isPlatformObject": false
+    },
+    "sourceApplicationExtensionId": "597d9e4a-1c0d-4225-86b2-0a1e864b7ca3",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/jbint-events/events/SalesforceData/images/SF-Event-Icon.svg",
+    "arguments": {
+        "serializedObjectType": 0,
+        "useHighWatermark": false,
+        "eventDefinitionKey": "SalesforceObj57a2ba13bbeb5fcf7f16ee4ca7c4e0f7",
+        "dataExtensionId": "B3268009-4B5D-43C6-9541-F79FC8499270",
+        "criteria": ""
+    },
+    "metaData": {
+        "criteriaDescription": "",
+        "scheduleState": "No Schedule"
+    },
+    "interactionCount": 0,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Event",
+    "publishedInteractionCount": 0,
+    "automationId": "00000000-0000-0000-0000-000000000000",
+    "disableDEDataLogging": false
+}

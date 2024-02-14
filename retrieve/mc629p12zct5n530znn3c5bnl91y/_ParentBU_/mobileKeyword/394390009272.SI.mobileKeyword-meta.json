@@ -1,0 +1,17 @@
+{
+    "createdDate": "2023-11-24T11:56:13.46Z",
+    "lastUpdated": "2023-11-24T11:56:13.52Z",
+    "startDate": "2023-11-24T11:56:13.433Z",
+    "endDate": "2043-11-24T11:56:13.433Z",
+    "status": "Active",
+    "createdBy": {
+        "name": "Marco Moscatelli"
+    },
+    "restriction": "NONE",
+    "keywordType": "NORMAL",
+    "isInherited": false,
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy",
+    "c__codeKeyword": "394390009272.SI"
+}

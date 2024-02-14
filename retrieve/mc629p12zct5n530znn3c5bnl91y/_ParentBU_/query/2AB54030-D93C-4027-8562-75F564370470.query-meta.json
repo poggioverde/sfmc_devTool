@@ -1,0 +1,11 @@
+{
+    "name": "qa_ultimoMese",
+    "key": "2AB54030-D93C-4027-8562-75F564370470",
+    "description": "",
+    "targetKey": "75EC5E95-02A4-4FBD-AF17-54F72766EB49",
+    "createdDate": "2023-12-05T03:23:48.047",
+    "modifiedDate": "2023-12-05T03:23:48.047",
+    "targetUpdateTypeName": "Update",
+    "isFrozen": false,
+    "r__folder_Path": "Query"
+}

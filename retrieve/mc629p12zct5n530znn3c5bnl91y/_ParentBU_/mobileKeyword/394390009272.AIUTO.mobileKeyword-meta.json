@@ -1,0 +1,18 @@
+{
+    "createdDate": "2023-11-24T11:54:22.157Z",
+    "lastUpdated": "2023-11-24T11:54:22.3Z",
+    "startDate": "2023-11-24T11:54:22.01Z",
+    "endDate": "2043-11-24T11:54:22.01Z",
+    "status": "Active",
+    "createdBy": {
+        "name": "Marco Moscatelli"
+    },
+    "restriction": "NONE",
+    "keywordType": "HELP",
+    "companyName": "IGNORED",
+    "isInherited": false,
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy",
+    "c__codeKeyword": "394390009272.AIUTO"
+}

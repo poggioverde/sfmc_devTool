@@ -1,0 +1,17 @@
+{
+    "createdDate": "2023-12-01T08:49:48.67Z",
+    "lastUpdated": "2023-12-01T08:49:48.8Z",
+    "startDate": "2023-12-01T08:49:48.557Z",
+    "endDate": "2043-12-01T08:49:48.557Z",
+    "status": "Active",
+    "createdBy": {
+        "name": "Marco Moscatelli"
+    },
+    "restriction": "NONE",
+    "keywordType": "NORMAL",
+    "isInherited": false,
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy",
+    "c__codeKeyword": "394390009272.DEM"
+}

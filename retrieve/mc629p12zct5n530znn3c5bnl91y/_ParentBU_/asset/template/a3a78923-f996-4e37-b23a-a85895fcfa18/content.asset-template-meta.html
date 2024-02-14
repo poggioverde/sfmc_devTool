@@ -1,0 +1,35 @@
+<div style="display: none">
+%%[
+    VAR @newsletterType, @newsletterLabel, @customerKey, @recordTypeId, @email
+    SET @newsletterType = 'Commerciale'
+    SET @newsletterLabel = 'Commerciale'
+    SET @customerKey = AttributeValue("AccountId")
+    SET @email = AttributeValue("Email")
+    SET @recordTypeId = AttributeValue("AccountRecordTypeId__c")
+]%%
+</div>
+<div style="text-align: center">
+    <span
+        style="
+            font-family: Verdana, Helvetica, Arial, sans-serif;
+            font-size: 11px;
+            color: #959595;
+            padding: 20px 0px 20px 0px;
+        "
+        >Ricevi questa mail perché hai fornito il consenso a ricevere le
+        comunicazioni commerciali in fase di sottoscrizione a socio o in fase di
+        registrazione al nostro portale. Per gestire liberamente i tuoi
+        consensi, clicca su “Gestisci i tuoi consensi”. Se non vuoi più ricevere
+        comunicazioni di questo tipo, clicca su <br /><u>
+            <a
+                alias="cancella la tua iscrizione"
+                conversion="false"
+                data-linkto="http://"
+                href="%%=RedirectTo(CloudPagesURL(4559,'nt',@newsletterType,'nl',@newsletterLabel,'ck',@customerKey,'rt',@recordTypeId,'em',@email))=%%"
+                style="color: #808080; text-decoration: underline"
+                title="cancella la tua iscrizione"
+                >Gestisci le tue preferenze</a
+            >
+        </u>
+    </span>
+</div>

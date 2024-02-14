@@ -1,0 +1,102 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+            <div style="visibility: hidden">
+%%[
+    VAR @email
+    SET @email = AttributeValue("Email")
+]%%
+</div>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <!-- FOOTER CONTENT -->
+                <tr>
+                    <td align="center" valign="top" width="100%">
+                        <table
+                            class="container"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="600"
+                        >
+                            <tr>
+                                <td
+                                    align="center"
+                                    style="
+                                        font-family: Verdana, Helvetica, Arial,
+                                            sans-serif;
+                                        font-size: 11px;
+                                        color: #959595;
+                                        padding: 20px 0px 20px 0px;
+                                    "
+                                >
+                                    <b
+                                        >Questa mail è stata programmata il 21
+                                        dicembre 2023.</b
+                                    ><br />Ricevi questa mail perché hai fornito
+                                    il consenso a ricevere le comunicazioni
+                                    commerciali in fase di sottoscrizione a
+                                    socio o in fase di registrazione al nostro
+                                    portale. <br />Per gestire liberamente i
+                                    tuoi consensi, clicca su “Gestisci i tuoi
+                                    consensi”. Se non vuoi più ricevere
+                                    comunicazioni di questo tipo, clicca su
+                                    “Gestisci le tue preferenze”.<br /><br />
+                                    <a
+                                        href="https://www.unicooptirreno.it/user-profile"
+                                        target="_blank"
+                                        style="
+                                            color: #808080;
+                                            text-decoration: underline;
+                                        "
+                                        >Gestisci i tuoi consensi</a
+                                    >
+                                    |
+                                    <a
+                                        alias=""
+                                        conversion="false"
+                                        data-linkto="http://"
+                                        href="%%=RedirectTo(CloudPagesURL(885,'em',@email))=%%"
+                                        style="
+                                            color: #808080;
+                                            text-decoration: underline;
+                                        "
+                                        title=""
+                                        >Gestisci le tue preferenze</a
+                                    ><br /><br />
+                                    Copyright &copy; %%xtyear%%
+                                    %%Member_Busname%%. Tutti i diritti sono
+                                    riservati.<br />
+                                    %%Member_Addr%% · %%Member_City%% ·
+                                    %%Member_State%% · %%Member_PostalCode%% ·
+                                    %%Member_Country%%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    align="center"
+                                    style="
+                                        font-family: Verdana, Helvetica, Arial,
+                                            sans-serif;
+                                        font-size: 11px;
+                                        color: #959595;
+                                        padding: 20px 0px 20px 0px;
+                                    "
+                                >
+                                    <div style="display: none">
+                                        <a href="%%profile_center_url%%">.</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,96 @@
+{
+    "name": "Refresh_KPI",
+    "description": "",
+    "key": "3432b728-3a18-a848-cb38-c4849713c417",
+    "type": "scheduled",
+    "status": "Scheduled",
+    "schedule": {
+        "startDate": "2023-11-09T11:00:00",
+        "endDate": "2079-06-06T00:00:00",
+        "icalRecur": "FREQ=HOURLY;UNTIL=20790606T080000;INTERVAL=1",
+        "timezoneName": "W. Europe Standard Time"
+    },
+    "steps": [
+        {
+            "name": "Basic Info",
+            "description": "",
+            "activities": [
+                {
+                    "name": "qa_1",
+                    "r__type": "query"
+                }
+            ]
+        },
+        {
+            "name": "Conteggi Totali",
+            "description": "",
+            "activities": [
+                {
+                    "name": "qa_2",
+                    "r__type": "query"
+                }
+            ]
+        },
+        {
+            "name": "Calcolo Rate\n",
+            "description": "",
+            "activities": [
+                {
+                    "name": "qa_3",
+                    "r__type": "query"
+                }
+            ]
+        },
+        {
+            "name": "Conteggi Unici",
+            "description": "",
+            "activities": [
+                {
+                    "name": "qa_4",
+                    "r__type": "query"
+                }
+            ]
+        },
+        {
+            "name": "KPI Ultimo Mese\n",
+            "description": "",
+            "activities": [
+                {
+                    "name": "qa_ultimoMese",
+                    "r__type": "query"
+                }
+            ]
+        }
+    ],
+    "notifications": [
+        {
+            "email": [
+                "mmoscatelli@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        },
+        {
+            "email": [
+                "mmoscatelli@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        },
+        {
+            "email": [
+                "mnagero@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        },
+        {
+            "email": [
+                "mnagero@deloitte.it"
+            ],
+            "message": "",
+            "type": "Error"
+        }
+    ],
+    "r__folder_Path": "my automations/KPI"
+}

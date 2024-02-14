@@ -1,0 +1,44 @@
+<table
+    cellpadding="0"
+    cellspacing="0"
+    width="100%"
+    role="presentation"
+    style="min-width: 100%"
+    class="stylingblock-content-wrapper"
+>
+    <tr>
+        <td class="stylingblock-content-wrapper camarker-inner">
+%%[ IF (([Punto Vendita di riferimento] == "Piombino")) THEN ]%%
+%%=BeginImpressionRegion("01__Rule_1__Piombino.jpg")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/2eaeeb1b-c510-45cb-8a12-b8d7d094e5a4.jpg"
+                data-assetid="40022"
+                alt="Piombino.jpg"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ELSEIF (([Punto Vendita di riferimento] == "Elba")) THEN ]%%
+%%=BeginImpressionRegion("01__Rule_2__Elba.jpg")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/92902b53-e1b8-4da3-8ee3-00eabd78a0e7.jpg"
+                data-assetid="40023"
+                alt="Elba.jpg"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ELSE ]%%
+%%=BeginImpressionRegion("01__Default_Content__Piombino.jpg")=%%
+            <img
+                src="http://image.tirreno.coop.it/lib/fe2e11737364047f701375/m/1/2eaeeb1b-c510-45cb-8a12-b8d7d094e5a4.jpg"
+                data-assetid="40022"
+                alt="Piombino.jpg"
+                width="100%"
+                height="auto"
+            />
+            %%=EndImpressionRegion()=%%
+%%[ ENDIF ]%%
+</td>
+    </tr>
+</table>

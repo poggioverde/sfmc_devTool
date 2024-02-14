@@ -1,0 +1,18 @@
+{
+    "createdDate": "2023-11-24T11:54:49.2Z",
+    "lastUpdated": "2023-11-24T11:54:49.29Z",
+    "startDate": "2023-11-24T11:54:49.153Z",
+    "endDate": "2043-11-24T11:54:49.153Z",
+    "status": "Active",
+    "createdBy": {
+        "name": "Marco Moscatelli"
+    },
+    "restriction": "NONE",
+    "keywordType": "STOP",
+    "companyName": "IGNORED",
+    "isInherited": false,
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy",
+    "c__codeKeyword": "394390009272.STOP"
+}

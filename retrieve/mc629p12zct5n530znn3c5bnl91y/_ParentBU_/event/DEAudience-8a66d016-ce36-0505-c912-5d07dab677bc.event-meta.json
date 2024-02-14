@@ -1,0 +1,35 @@
+{
+    "type": "EmailAudience",
+    "name": "Sender Profiles Attempts",
+    "description": "",
+    "createdDate": "2023-10-24T03:51:41.937",
+    "createdBy": 737195500,
+    "modifiedDate": "2023-10-24T03:51:41.937",
+    "modifiedBy": 737195500,
+    "mode": "Production",
+    "eventDefinitionKey": "DEAudience-8a66d016-ce36-0505-c912-5d07dab677bc",
+    "dataExtensionName": "SMS_DD_DE",
+    "sourceApplicationExtensionId": "97e942ee-6914-4d3d-9e52-37ecb71f79ed",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/images/icon-data-extension.svg",
+    "arguments": {
+        "serializedObjectType": 3,
+        "useHighWatermark": false,
+        "eventDefinitionKey": "DEAudience-8a66d016-ce36-0505-c912-5d07dab677bc",
+        "dataExtensionId": "07017D3C-CCC2-43FC-A866-BED2A61D3140",
+        "criteria": ""
+    },
+    "metaData": {
+        "criteriaDescription": "",
+        "scheduleFlowMode": "runOnce",
+        "runOnceScheduleMode": "onPublish",
+        "scheduleState": "No Schedule"
+    },
+    "interactionCount": 3,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Audience",
+    "publishedInteractionCount": 0,
+    "automationId": "11615cab-30f4-41fa-b5c1-1eabc755bc73",
+    "disableDEDataLogging": false
+}

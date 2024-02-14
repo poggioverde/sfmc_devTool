@@ -1,0 +1,38 @@
+{
+    "CreatedDate": "2023-12-01T03:09:00",
+    "ModifiedDate": "2024-02-06T02:23:00",
+    "CustomerKey": 35341,
+    "Name": "Volantino_DD - 36215a5677e947b4b394f9b6ab195293",
+    "Description": "Volantino_DD - 36215a5677e947b4b394f9b6ab195293",
+    "Keyword": "",
+    "SendClassification": {
+        "CustomerKey": "Default Commercial"
+    },
+    "SenderProfile": {
+        "CustomerKey": 803
+    },
+    "FromName": "Offerte Unicoop Tirreno",
+    "FromAddress": "convenienza@tirreno.coop.it",
+    "DeliveryProfile": {
+        "PartnerKey": "",
+        "CustomerKey": 134
+    },
+    "SuppressTracking": false,
+    "TriggeredSendType": "Continuous",
+    "TriggeredSendStatus": "Inactive",
+    "AutoAddSubscribers": true,
+    "AutoUpdateSubscribers": true,
+    "BatchInterval": 0,
+    "BccEmail": "",
+    "EmailSubject": "Scopri le Offerte del Nuovo Volantino Unicoop Tirreno",
+    "DynamicEmailSubject": "Scopri le Offerte del Nuovo Volantino Unicoop Tirreno",
+    "IsMultipart": true,
+    "IsWrapped": true,
+    "AllowedSlots": 0,
+    "NewSlotTrigger": 0,
+    "Priority": 4,
+    "r__folder_Path": "Journey Builder Sends/New Journey - December 1 2023 at 9.56 AM/Version 1",
+    "r__assetMessage_Name_readOnly": "Volantino_DD",
+    "r__assetMessage_Key": "84232975-9e84-4d34-841f-387edd11ef15",
+    "r__list_PathName": "my subscribers/All Subscribers"
+}

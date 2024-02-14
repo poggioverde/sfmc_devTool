@@ -1,0 +1,35 @@
+{
+    "type": "EmailAudience",
+    "name": "New Journey - December 1 2023 at 9.56 AM",
+    "description": "",
+    "createdDate": "2023-12-01T03:07:02.847",
+    "createdBy": 737211176,
+    "modifiedDate": "2023-12-01T03:07:02.847",
+    "modifiedBy": 737211176,
+    "mode": "Production",
+    "eventDefinitionKey": "DEAudience-af985d6a-7fd7-66ea-4177-92428d34e3f9",
+    "dataExtensionName": "SMS_DD",
+    "sourceApplicationExtensionId": "97e942ee-6914-4d3d-9e52-37ecb71f79ed",
+    "filterDefinitionTemplate": "",
+    "iconUrl": "/images/icon-data-extension.svg",
+    "arguments": {
+        "serializedObjectType": 3,
+        "useHighWatermark": false,
+        "eventDefinitionKey": "DEAudience-af985d6a-7fd7-66ea-4177-92428d34e3f9",
+        "dataExtensionId": "CB8B0061-94FE-4640-8CDC-98F5EE5FDCC2",
+        "criteria": ""
+    },
+    "metaData": {
+        "criteriaDescription": "",
+        "scheduleFlowMode": "runOnce",
+        "runOnceScheduleMode": "onPublish",
+        "scheduleState": "No Schedule"
+    },
+    "interactionCount": 1,
+    "isVisibleInPicker": false,
+    "isPlatformObject": false,
+    "category": "Audience",
+    "publishedInteractionCount": 0,
+    "automationId": "e30cd7f5-f7e3-491e-851c-883249386371",
+    "disableDEDataLogging": false
+}

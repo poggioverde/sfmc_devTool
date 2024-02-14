@@ -1,0 +1,76 @@
+{
+    "id": "Mjo3ODow",
+    "lastUpdated": "2023-11-26T06:11:00Z",
+    "type": "ExactTarget.Mobile.Sms.Core.Entities.SmsMessageEntity",
+    "name": "FirstSMS",
+    "origin": "SMS Send",
+    "code": {
+        "code": "394390009272"
+    },
+    "audience": [
+        {
+            "id": "R2prSjhvcV9FZTY2U3ZRRFEtZndRQTo2Mzow",
+            "name": "",
+            "description": "",
+            "contactCount": 0,
+            "isRefresh": false,
+            "refreshTimeoutInMinutes": 0,
+            "audienceClass": "SFMCAudienceBuilderResultTemplate"
+        }
+    ],
+    "mtSendDate": "2023-11-24T12:37:00Z",
+    "template": {
+        "id": "Mzo4MDow",
+        "name": "Outbound"
+    },
+    "status": "Inactive",
+    "invalidMessage": "",
+    "responseMessage": "",
+    "publishedMessage": "Text '<keyword>'  to 394390009272.",
+    "isTest": false,
+    "moTimezone": {
+        "offset": 1,
+        "name": "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna *"
+    },
+    "optinType": "NO_OPTIN",
+    "doubleOptinInitialMessage": "",
+    "doubleOptinConfirmMessage": "",
+    "optinMinimumAge": 0,
+    "optinInvalidAgeMessage": "",
+    "numberMessagesPerPeriod": 0,
+    "periodType": "NO_PERIOD",
+    "optinErrorMessage": "",
+    "isDuplicationAllowed": true,
+    "triggeredSendName": "",
+    "isTimeZoneBased": false,
+    "surveyType": "NO_SURVEY",
+    "surveyCorrectResponseMessage": "",
+    "surveyTooManyEntriesMessage": "",
+    "isExpireSet": false,
+    "expireHours": 0,
+    "surveyIncorrectResponseMessage": "",
+    "statusId": 3,
+    "doubleOptinValidResponses": "y|yes",
+    "messagesPerPeriod": 0,
+    "minutesPerPeriod": 0,
+    "subscriberResponseMessage": "",
+    "isSubscriberResponseToAnySubscriptionForShortCode": false,
+    "sendMethod": "USER",
+    "messageObjectId": "VXpBNkdJcW5Ga3FPZXFvRVpFM3EtQTo2MjU6MA",
+    "allowSingleOptin": false,
+    "isSentImmediately": true,
+    "isSuppressMt": false,
+    "smsTriggeredSendDefinitionId": "00000000-0000-0000-0000-000000000000",
+    "fromName": "",
+    "subscriptionKeyword": {
+        "c__codeKeyword": "394390009272.SI"
+    },
+    "concatenateMessage": false,
+    "isFromNameCertificationAccepted": false,
+    "isCertified": false,
+    "outboundSendTypeFlag": "Audience",
+    "outboundSendBehaviorFlag": "AutoAddSubscribers",
+    "isLinkShorteningEnabled": false,
+    "isSubscriberTrackingEnabled": false,
+    "shortenerType": "BitLy"
+}
